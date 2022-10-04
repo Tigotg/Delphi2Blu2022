@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 338
-  ClientWidth = 377
+  ClientHeight = 508
+  ClientWidth = 485
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 24
-    Top = 24
+    Left = 48
+    Top = 8
     Width = 316
     Height = 33
     Caption = 'Calcular Fatura Energia'
@@ -28,7 +28,7 @@ object Form1: TForm1
   end
   object Label2: TLabel
     Left = 24
-    Top = 80
+    Top = 63
     Width = 26
     Height = 13
     Caption = 'KW/h'
@@ -42,14 +42,21 @@ object Form1: TForm1
   end
   object Label4: TLabel
     Left = 24
-    Top = 198
+    Top = 222
     Width = 41
     Height = 13
     Caption = 'Hist'#243'rico'
   end
+  object Label5: TLabel
+    Left = 20
+    Top = 106
+    Width = 45
+    Height = 13
+    Caption = 'Desconto'
+  end
   object edtKwh: TEdit
     Left = 24
-    Top = 99
+    Top = 82
     Width = 121
     Height = 21
     TabOrder = 0
@@ -64,22 +71,31 @@ object Form1: TForm1
     Items.Strings = (
       'Resid'#234'ncia'
       'Com'#233'rcio'
-      'Ind'#250'stria')
+      'Ind'#250'stria'
+      'Fazenda')
   end
   object mmHistorico: TMemo
     Left = 24
-    Top = 217
+    Top = 241
     Width = 321
     Height = 113
-    TabOrder = 2
+    ReadOnly = True
+    TabOrder = 4
   end
   object btnCalcular: TButton
-    Left = 70
-    Top = 152
+    Left = 78
+    Top = 168
     Width = 219
     Height = 25
     Caption = 'Calcular'
     TabOrder = 3
     OnClick = btnCalcularClick
+  end
+  object edtDesconto: TEdit
+    Left = 24
+    Top = 125
+    Width = 121
+    Height = 21
+    TabOrder = 2
   end
 end
