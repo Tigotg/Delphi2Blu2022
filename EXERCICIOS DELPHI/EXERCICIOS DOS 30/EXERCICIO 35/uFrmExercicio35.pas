@@ -17,6 +17,8 @@ type
     mmHistorico: TMemo;
     Label4: TLabel;
     btnCalcular: TButton;
+    edtDesconto: TEdit;
+    Label5: TLabel;
     procedure btnCalcularClick(Sender: TObject);
   private
     procedure CalcularEnergia;
@@ -48,17 +50,22 @@ const
   cKwh060  = 0.60;
   cKwh048  = 0.48;
   cKwh0129 = 1.29;
-begin
-  xKwh := 0;
-  if cbxTipoConsumidor.ItemIndex = 0 then
-    xKwh := StrToFloat(edtKwh.Text) * cKwh060
-    else if cbxTipoConsumidor.ItemIndex = 1 then
-      xKwh := StrToFloat(edtKwh.Text) * cKwh048
-      else if cbxTipoConsumidor.ItemIndex = 2 then
-        xKwh := StrToFloat(edtKwh.Text) * cKwh0129;
+  cKwh0218 = 2.18;
 
-        mmHistorico.Lines.Add('Tipo de Consumidor: ' + cbxTipoConsumidor.Items[cbxTipoConsumidor.ItemIndex] +
-                              ' Total da Fatura é: ' + FormatFloat('0.00', xKwh));
+begin
+
+
+  if cbxTipoConsumidor.ItemIndex = 0 then
+    xKwh := (StrToFloat(edtKwh.Text) * cKwh060) -(StrToFloatDef(edtDesconto.Text, 0))
+  else if cbxTipoConsumidor.ItemIndex = 1 then
+    xKwh := (StrToFloat(edtKwh.Text) * cKwh048)-(StrToFloatDef(edtDesconto.Text,0))
+  else if cbxTipoConsumidor.ItemIndex = 2 then
+    xKwh := (StrToFloat(edtKwh.Text) * cKwh0129)-(StrToFloatDef(edtDesconto.Text,0))
+  else if cbxTipoConsumidor.ItemIndex = 3 then
+    xKwh := (StrToFloat(edtKwh.Text) * cKwh0218)-(StrToFloatDef(edtDesconto.Text, 0));
+
+  mmHistorico.Lines.Add('Tipo de Consumidor: ' + cbxTipoConsumidor.Items[cbxTipoConsumidor.ItemIndex] +
+                        ' Total da Fatura é: ' + FormatFloat('0.00', xKwh));
 end;
 
 end.
