@@ -1,0 +1,324 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 487
+  ClientWidth = 558
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 35
+    Width = 37
+    Height = 13
+    Caption = 'Cliente:'
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 310
+    Width = 37
+    Height = 13
+    Caption = 'Cidade:'
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 337
+    Width = 32
+    Height = 13
+    Caption = 'Bairro:'
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 364
+    Width = 16
+    Height = 13
+    Caption = 'N'#186':'
+  end
+  object Label5: TLabel
+    Left = 120
+    Top = 364
+    Width = 23
+    Height = 13
+    Caption = 'CEP:'
+  end
+  object Label6: TLabel
+    Left = 8
+    Top = 62
+    Width = 31
+    Height = 13
+    Caption = 'Label6'
+  end
+  object Label7: TLabel
+    Left = 8
+    Top = 89
+    Width = 31
+    Height = 13
+    Caption = 'Label7'
+  end
+  object Label8: TLabel
+    Left = 8
+    Top = 116
+    Width = 31
+    Height = 13
+    Caption = 'Label8'
+  end
+  object Label9: TLabel
+    Left = 8
+    Top = 143
+    Width = 31
+    Height = 13
+    Caption = 'Label9'
+  end
+  object Label10: TLabel
+    Left = 8
+    Top = 170
+    Width = 37
+    Height = 13
+    Caption = 'Label10'
+  end
+  object Label11: TLabel
+    Left = 8
+    Top = 197
+    Width = 37
+    Height = 13
+    Caption = 'Label11'
+  end
+  object Label12: TLabel
+    Left = 8
+    Top = 224
+    Width = 37
+    Height = 13
+    Caption = 'Label12'
+  end
+  object Label13: TLabel
+    Left = 8
+    Top = 251
+    Width = 37
+    Height = 13
+    Caption = 'Label13'
+  end
+  object Label14: TLabel
+    Left = 213
+    Top = 89
+    Width = 37
+    Height = 13
+    Caption = 'Label14'
+  end
+  object Label15: TLabel
+    Left = 213
+    Top = 116
+    Width = 37
+    Height = 13
+    Caption = 'Label15'
+  end
+  object Label16: TLabel
+    Left = 213
+    Top = 143
+    Width = 37
+    Height = 13
+    Caption = 'Label16'
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 454
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 56
+    Top = 32
+    Width = 321
+    Height = 21
+    TabOrder = 1
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 56
+    Top = 59
+    Width = 321
+    Height = 21
+    TabOrder = 2
+    Text = 'Edit2'
+  end
+  object Edit3: TEdit
+    Left = 56
+    Top = 86
+    Width = 139
+    Height = 21
+    TabOrder = 3
+    Text = 'Edit3'
+  end
+  object Edit4: TEdit
+    Left = 56
+    Top = 113
+    Width = 139
+    Height = 21
+    TabOrder = 4
+    Text = 'Edit4'
+  end
+  object Edit5: TEdit
+    Left = 56
+    Top = 140
+    Width = 139
+    Height = 21
+    TabOrder = 5
+    Text = 'Edit5'
+  end
+  object Button2: TButton
+    Left = 120
+    Top = 458
+    Width = 75
+    Height = 25
+    Caption = 'Button2'
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 232
+    Top = 458
+    Width = 75
+    Height = 25
+    Caption = 'Button3'
+    TabOrder = 7
+  end
+  object Button4: TButton
+    Left = 344
+    Top = 454
+    Width = 75
+    Height = 25
+    Caption = 'Button4'
+    TabOrder = 8
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 558
+    Height = 25
+    Align = alTop
+    Caption = 'Cadastro de Pessoas'
+    TabOrder = 9
+    ExplicitLeft = 16
+    ExplicitTop = 16
+    ExplicitWidth = 545
+  end
+  object Edit6: TEdit
+    Left = 256
+    Top = 113
+    Width = 121
+    Height = 21
+    TabOrder = 10
+    Text = 'Edit6'
+  end
+  object Edit7: TEdit
+    Left = 256
+    Top = 86
+    Width = 121
+    Height = 21
+    TabOrder = 11
+    Text = 'Edit7'
+  end
+  object Edit8: TEdit
+    Left = 56
+    Top = 307
+    Width = 121
+    Height = 21
+    TabOrder = 12
+    Text = 'Edit8'
+  end
+  object Edit9: TEdit
+    Left = 256
+    Top = 140
+    Width = 121
+    Height = 21
+    TabOrder = 13
+    Text = 'Edit9'
+  end
+  object Edit10: TEdit
+    Left = 56
+    Top = 167
+    Width = 121
+    Height = 21
+    TabOrder = 14
+    Text = 'Edit10'
+  end
+  object Edit11: TEdit
+    Left = 56
+    Top = 194
+    Width = 121
+    Height = 21
+    TabOrder = 15
+    Text = 'Edit11'
+  end
+  object Edit12: TEdit
+    Left = 56
+    Top = 221
+    Width = 121
+    Height = 21
+    TabOrder = 16
+    Text = 'Edit12'
+  end
+  object Edit13: TEdit
+    Left = 56
+    Top = 248
+    Width = 121
+    Height = 21
+    TabOrder = 17
+    Text = 'Edit13'
+  end
+  object Edit14: TEdit
+    Left = 56
+    Top = 334
+    Width = 121
+    Height = 21
+    TabOrder = 18
+    Text = 'Edit14'
+  end
+  object Edit15: TEdit
+    Left = 56
+    Top = 361
+    Width = 57
+    Height = 21
+    TabOrder = 19
+    Text = 'Edit15'
+  end
+  object Edit16: TEdit
+    Left = 149
+    Top = 361
+    Width = 121
+    Height = 21
+    TabOrder = 20
+    Text = 'Edit16'
+  end
+  object CalendarPicker1: TCalendarPicker
+    Left = 296
+    Top = 221
+    Height = 32
+    CalendarHeaderInfo.DaysOfWeekFont.Charset = DEFAULT_CHARSET
+    CalendarHeaderInfo.DaysOfWeekFont.Color = clWindowText
+    CalendarHeaderInfo.DaysOfWeekFont.Height = -13
+    CalendarHeaderInfo.DaysOfWeekFont.Name = 'Segoe UI'
+    CalendarHeaderInfo.DaysOfWeekFont.Style = []
+    CalendarHeaderInfo.Font.Charset = DEFAULT_CHARSET
+    CalendarHeaderInfo.Font.Color = clWindowText
+    CalendarHeaderInfo.Font.Height = -20
+    CalendarHeaderInfo.Font.Name = 'Segoe UI'
+    CalendarHeaderInfo.Font.Style = []
+    Color = clWindow
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGray
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 21
+    TextHint = 'select a date'
+  end
+end

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/09 18:20:27.000.420,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/13 18:07:08.000.127,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/14 18:56:01.000.366,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\ARRAYS E RECORDS\RECORD\EXERCICIO 2\Project1.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

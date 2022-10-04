@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/09 18:20:27.000.420,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/12 20:40:21.000.529,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/12 20:50:11.000.678,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\PROCEDURES E FUNCTIONS\UfrmProceduresFunctions.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/12 20:50:11.000.678,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\PROCEDURES E FUNCTIONS\UfrmProceduresFunctions.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/09/12 20:54:32.000.697,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\PROCEDURES E FUNCTIONS\Project1.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

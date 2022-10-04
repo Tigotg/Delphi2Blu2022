@@ -1,0 +1,81 @@
+unit uFrmExercicco22;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label4: TLabel;
+    mmResultadoVenda: TMemo;
+    btnCalcular: TButton;
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    procedure CalcularVenda;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnCalcularClick(Sender: TObject);
+begin
+  CalcularVenda;
+end;
+
+procedure TForm1.CalcularVenda;
+var
+  xValorCompra, xValorVenda, xDiferenca, xTotVendas: Double;
+  xQtdProdutos: Integer;
+  I: Integer;
+
+begin
+  for I := 1 to 4 do
+  begin
+    xQtdProdutos := 0;
+    xDiferenca := 0;
+    xValorCompra := StrToFloat(AnsiUpperCase(Inputbox('INFORMAR', 'Informe o Valor de Custo:', '')));
+    xValorVenda := StrToFloat(AnsiUpperCase(Inputbox('INFORMAR', 'Informe o Valor de Venda:', '')));
+
+    if (xValorCompra > 0) or (xValorVenda > 0) then
+    begin
+      //inc(xQtdProdutos);
+      xDiferenca := xValorVenda - xValorCompra;
+      xTotVendas := (xValorVenda - xDiferenca) + xDiferenca;
+
+      if xValorVenda < xValorCompra then
+      begin
+        mmResultadoVenda.Lines.Add('Venda Com Prejuízo!' + 'Valor do prejuizo é:' +
+                                    xDiferenca.ToString + '.' + #13#10);
+                                    inc(xQtdProdutos);
+      end
+      else if xValorCompra < xValorVenda then
+      begin
+        mmResultadoVenda.Lines.Add('Venda Com Lucro!' + 'Valor do Lucro é:' +
+                                  xDiferenca.ToString + '.' + #13#10);
+                                  inc(xQtdProdutos);
+      end
+      else if xValorVenda = xValorCompra then
+      begin
+        mmResultadoVenda.Lines.Add('Venda com empate de valores!' + 'Valor do Lucro é:' +
+                                  xDiferenca.ToString + '.' + #13#10);
+                                  inc(xQtdProdutos);
+      end;
+            mmResultadoVenda.Lines.Add('Total de produtos vendidos foi:' + xQtdProdutos.ToString + #13#10 +
+                                 'Total de lucro foi:' + xTotVendas.ToString + '.' + #13#10);
+    end;
+  end;
+end;
+
+end.

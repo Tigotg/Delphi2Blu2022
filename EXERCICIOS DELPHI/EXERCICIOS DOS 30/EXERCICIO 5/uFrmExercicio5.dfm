@@ -1,0 +1,117 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 499
+  ClientWidth = 425
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 82
+    Top = 95
+    Width = 31
+    Height = 13
+    Caption = 'Nome:'
+  end
+  object Label2: TLabel
+    Left = 72
+    Top = 131
+    Width = 41
+    Height = 13
+    Caption = '1'#170' Nota:'
+  end
+  object Label3: TLabel
+    Left = 72
+    Top = 168
+    Width = 41
+    Height = 13
+    Caption = '2'#170' Nota:'
+  end
+  object Label4: TLabel
+    Left = 72
+    Top = 202
+    Width = 41
+    Height = 13
+    Caption = '3'#170' Nota:'
+  end
+  object Label5: TLabel
+    Left = 120
+    Top = 280
+    Width = 80
+    Height = 13
+    Caption = 'Informativo Alno'
+  end
+  object Label6: TLabel
+    Left = 120
+    Top = 32
+    Width = 228
+    Height = 33
+    Caption = 'C'#225'lculo de M'#233'dia'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edtNota1: TEdit
+    Left = 115
+    Top = 128
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object edtNota2: TEdit
+    Left = 115
+    Top = 165
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object edtNota3: TEdit
+    Left = 115
+    Top = 199
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object edtNomeAluno: TEdit
+    Left = 115
+    Top = 92
+    Width = 238
+    Height = 21
+    TabOrder = 0
+  end
+  object mmInformativo: TMemo
+    Left = 115
+    Top = 299
+    Width = 185
+    Height = 174
+    TabOrder = 6
+  end
+  object btnCalculaMedia: TButton
+    Left = 115
+    Top = 241
+    Width = 75
+    Height = 25
+    Caption = 'Calcular M'#233'dia'
+    TabOrder = 4
+    OnClick = btnCalculaMediaClick
+  end
+  object btnLimpaTela: TButton
+    Left = 225
+    Top = 241
+    Width = 75
+    Height = 25
+    Caption = 'Limpa Tela'
+    TabOrder = 5
+    OnClick = btnLimpaTelaClick
+  end
+end

@@ -1,0 +1,14 @@
+program MenuComExercicio;
+
+uses
+  Vcl.Forms,
+  uFrmMenuComExercicio in 'uFrmMenuComExercicio.pas' {FrmMenuComExercicio};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmMenuComExercicio, FrmMenuComExercicio);
+  Application.Run;
+end.

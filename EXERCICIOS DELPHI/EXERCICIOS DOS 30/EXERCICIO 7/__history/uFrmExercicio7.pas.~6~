@@ -1,0 +1,57 @@
+unit uFrmExercicio7;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    edtTemperatura: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    btnConverter: TButton;
+    btnLimpaTela: TButton;
+    edtVisor: TEdit;
+    Label3: TLabel;
+    procedure btnConverterClick(Sender: TObject);
+    procedure btnLimpaTelaClick(Sender: TObject);
+  private
+    function ConverteTemperatura: Double;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+procedure TForm1.btnConverterClick(Sender: TObject);
+begin
+  edtVisor.Text := FloatToStr(ConverteTemperatura);
+
+end;
+
+procedure TForm1.btnLimpaTelaClick(Sender: TObject);
+begin
+  edtTemperatura.Clear;
+  edtVisor.Clear;
+  edtTemperatura.SetFocus;
+end;
+
+function TForm1.ConverteTemperatura: Double;
+var
+  xF, xC: Double;
+begin
+  xC := StrToFloat(edtTemperatura.Text);
+  xF := (9 * xC + 160) / 5;
+  Result :=  xF;
+  // Outra forma de fazer mais simplificada
+  // Result := (9 * StrToFloat(edtGrauC.Text) + 160) / 5;
+end;
+
+end.

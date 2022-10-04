@@ -1,0 +1,128 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 312
+  ClientWidth = 390
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 79
+    Top = 8
+    Width = 232
+    Height = 33
+    Caption = 'Custo de Compra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 72
+    Width = 87
+    Height = 16
+    Caption = 'Valor Compra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 137
+    Top = 73
+    Width = 71
+    Height = 16
+    Caption = '% Imposto'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 243
+    Top = 72
+    Width = 93
+    Height = 16
+    Caption = '% Distribuidor'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 24
+    Top = 147
+    Width = 69
+    Height = 16
+    Caption = 'Pre'#231'o Final'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edtValorCompra: TEdit
+    Left = 24
+    Top = 94
+    Width = 89
+    Height = 21
+    TabOrder = 0
+  end
+  object edtPercImposto: TEdit
+    Left = 137
+    Top = 94
+    Width = 82
+    Height = 21
+    TabOrder = 1
+  end
+  object edtPercDistrib: TEdit
+    Left = 243
+    Top = 94
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object mmPrecoFinal: TMemo
+    Left = 27
+    Top = 169
+    Width = 256
+    Height = 120
+    ScrollBars = ssVertical
+    TabOrder = 5
+  end
+  object btnCalcular: TButton
+    Left = 289
+    Top = 167
+    Width = 75
+    Height = 25
+    Caption = 'Calcular'
+    TabOrder = 3
+    OnClick = btnCalcularClick
+  end
+  object btnLimpaTela: TButton
+    Left = 289
+    Top = 264
+    Width = 75
+    Height = 25
+    Caption = 'Limpa Tela'
+    TabOrder = 4
+    OnClick = btnLimpaTelaClick
+  end
+end

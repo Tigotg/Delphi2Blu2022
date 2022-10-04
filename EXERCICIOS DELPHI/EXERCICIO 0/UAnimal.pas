@@ -1,0 +1,12 @@
+unit UAnimal;
+
+interface
+
+Type
+  TAnimal = class
+    procedure MeuSomEh; Virtual; abstract;
+end;
+
+implementation
+
+end.

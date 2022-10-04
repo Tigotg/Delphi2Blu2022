@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/09/30 20:42:52.961,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 20:43:58.412,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\uFrmMenuComExercicio.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 20:43:58.412,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\uFrmMenuComExercicio.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/09/30 20:44:26.560,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\MenuComExercicio.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/09/30 20:49:29.819,=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 20:50:56.435,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\uFrmSalario.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit1.dfm</Transaction>
+    <Transaction>2022/09/30 20:50:56.435,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\uFrmSalario.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 20:51:01.271,=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit2.pas</Transaction>
+    <Transaction>2022/09/30 20:51:17.629,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\uFrmValidarMes.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit2.dfm</Transaction>
+    <Transaction>2022/09/30 20:51:17.629,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\uFrmValidarMes.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit2.pas</Transaction>
+    <Transaction>2022/09/30 20:51:27.332,=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit3.pas</Transaction>
+    <Transaction>2022/09/30 20:51:45.229,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\uFrmLerValores.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit3.dfm</Transaction>
+    <Transaction>2022/09/30 20:51:45.229,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\uFrmLerValores.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\MENU COM EXERCICIOS APLICADOS\Unit3.pas</Transaction>
+  </Transactions>
+</BorlandProject>

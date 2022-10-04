@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 248
+  ClientWidth = 418
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 80
+    Top = 16
+    Width = 256
+    Height = 19
+    Caption = 'Usando a RTL e Tipos de Dados'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 80
+    Top = 59
+    Width = 55
+    Height = 13
+    Caption = 'Valor String'
+  end
+  object lblResultado: TLabel
+    Left = 80
+    Top = 184
+    Width = 82
+    Height = 19
+    Caption = 'Resultado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object btnInteiro: TButton
+    Left = 80
+    Top = 105
+    Width = 123
+    Height = 25
+    Caption = 'Inteiro'
+    TabOrder = 0
+    OnClick = btnInteiroClick
+  end
+  object btnPontoFlutuante: TButton
+    Left = 213
+    Top = 105
+    Width = 123
+    Height = 25
+    Caption = 'Ponto Flutuante'
+    TabOrder = 1
+    OnClick = btnPontoFlutuanteClick
+  end
+  object btnData: TButton
+    Left = 80
+    Top = 136
+    Width = 123
+    Height = 25
+    Caption = 'Data'
+    TabOrder = 2
+    OnClick = btnDataClick
+  end
+  object btnDataExtenso: TButton
+    Left = 213
+    Top = 136
+    Width = 123
+    Height = 25
+    Caption = 'Data Extenso'
+    TabOrder = 3
+    OnClick = btnDataExtensoClick
+  end
+  object edtVisor: TEdit
+    Left = 80
+    Top = 78
+    Width = 256
+    Height = 21
+    TabOrder = 4
+  end
+end

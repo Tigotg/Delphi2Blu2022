@@ -1,0 +1,68 @@
+unit uFrmExercicio16;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    edtNome: TEdit;
+    edtNota1: TEdit;
+    edtNota2: TEdit;
+    edtNota3: TEdit;
+    btnLimpaTela: TButton;
+    btnCalculaMedia: TButton;
+    procedure btnCalculaMediaClick(Sender: TObject);
+  private
+    procedure CalcularMedia;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnCalculaMediaClick(Sender: TObject);
+begin
+  CalcularMedia;
+end;
+
+procedure TForm1.CalcularMedia;
+var
+  xNomeAluno: String;
+  xNota1, xNota2, xNota3, xMedia: Double;
+begin
+  xNomeAluno := edtNome.Text;
+  xNota1 := StrToFloat(edtNota1.Text);
+  xNota2 := StrToFloat(edtNota2.Text);
+  xNota3 := StrToFloat(edtNota3.Text);
+
+  xMedia := (xNota1 + xNota2 + xNota3)/ 3;
+
+  if xMedia >= 7 then
+    ShowMessage('Parabéns ' + xNomeAluno + ' Você Foi Aprovado');
+    if xMedia <= 5 then
+      ShowMessage(xNomeAluno + ' voce não foi aprovado, estude mais');
+      if (xMedia >= 5.1) and (xMedia <= 6.9) then
+        ShowMessage(xNomeAluno + ' Você ficou em recuperação.');
+end;
+
+end.
+
+{16. Escreva um algoritmo que leia o nome e as três notas obtidas por um aluno durante o
+semestre. Calcular a sua média (aritmética), informar o nome e sua menção aprovado (media
+>= 7), Reprovado (media <= 5) e Recuperação (media entre 5.1 a 6.9);}

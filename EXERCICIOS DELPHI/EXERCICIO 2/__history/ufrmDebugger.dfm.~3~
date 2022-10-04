@@ -1,0 +1,85 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Explorando o Debugger'
+  ClientHeight = 274
+  ClientWidth = 475
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblTitulo: TLabel
+    Left = 102
+    Top = 15
+    Width = 273
+    Height = 20
+    Caption = 'Explorando o Debugger do Delphi'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object mmAtalhos: TMemo
+    Left = 16
+    Top = 48
+    Width = 209
+    Height = 161
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    Lines.Strings = (
+      'F7 - Debug - Trace Into'
+      'Ctrl + F7  - Evaluate/Modify'
+      'F8 - Debug - Step Over'
+      'F9 - Run'
+      'Ctrl + F9 - Compile Project'
+      'F11 - Object Inspector'
+      'F12 - Toggle Form/Unit'
+      'Ctrl + F12 - Search Units'
+      'Shift + F12 + Search Forms')
+    ParentFont = False
+    TabOrder = 0
+  end
+  object mmAtalhos2: TMemo
+    Left = 248
+    Top = 48
+    Width = 209
+    Height = 161
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    Lines.Strings = (
+      'BreakPoints - Ctrl + Alt + B'
+      'Call Stack - Ctrl + Alt + S'
+      'Watchers - Ctrl + Alt + W'
+      'Threads - Ctrl + Alt + T'
+      'Ctrl + Shift + N'#186' Marcador')
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnProcessar: TButton
+    Left = 153
+    Top = 226
+    Width = 164
+    Height = 32
+    Caption = 'Processar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+end

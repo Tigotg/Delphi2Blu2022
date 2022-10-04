@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/09 18:20:27.000.420,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/12 19:06:14.000.499,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/12 19:19:12.000.774,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXERCICIO 2\ufrmDebugger.dfm</Transaction>
+    <Transaction>2022/09/12 19:19:12.000.774,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXERCICIO 2\ufrmDebugger.pas</Transaction>
+    <Transaction>2022/09/12 19:19:16.000.044,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXERCICIO 2\Project1.dproj</Transaction>
+    <Transaction>2022/09/12 19:19:29.000.288,=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXERCICIO 2\Unit1.pas</Transaction>
+    <Transaction>2022/09/12 19:19:52.000.375,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXERCICIO 2\Unit1.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXERCICIO 2\UCalculadora.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,14 @@
+program Exercicco24;
+
+uses
+  Vcl.Forms,
+  uFrmExercicco24 in 'uFrmExercicco24.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

@@ -1,0 +1,78 @@
+unit uFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TNivel = (nEstagiario, nJunior, nPleno, nSenior);
+
+  TForm1 = class(TForm)
+    btnIf: TButton;
+    btnCase: TButton;
+    edtVisor: TEdit;
+    lblComandoCondicional: TLabel;
+    rdgNivel: TRadioGroup;
+    procedure btnIfClick(Sender: TObject);
+    procedure btnCaseClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnCaseClick(Sender: TObject);
+var
+xNivel: String;
+begin
+  case TNivel(rdgNivel.ItemIndex) of
+    nEstagiario: //Estagiário
+    begin
+      xNivel := ('Sou um Estagiário');
+    end;
+    nJunior: //Junior
+    begin
+      xNivel := ('Sou do nível Júnior');
+    end;
+    nPleno: //Pleno
+    begin
+      xNivel := ('Sou do nível Pleno');
+    end;
+    nSenior: //Sênior
+    begin
+      xNivel := ('Sou do nível Sênior');
+    end;
+    else
+    begin  //Sem Definição
+      xNivel := ('Estou desempregado, sem Nível');
+    end;
+  end;
+  ShowMessage(xNivel);
+end;
+
+procedure TForm1.btnIfClick(Sender: TObject);
+begin
+  if uppercase (edtVisor.Text) = ('TIAGO') then
+    ShowMessage('Sou eu: Presente')
+    else
+    try
+      if uppercase (edtVisor.Text) <> ('TIAGO') then
+        raise Exception.Create('Informe o nome desejado para validar o IF.');
+    except
+    on E: Exception do
+    begin
+      Raise;
+    end;
+  end;
+end;
+
+end.

@@ -1,0 +1,62 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Que animal sou eu?'
+  ClientHeight = 574
+  ClientWidth = 579
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 104
+    Top = 24
+    Width = 159
+    Height = 19
+    Caption = 'Que animal sou eu?'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object cmbAnimal: TComboBox
+    Left = 104
+    Top = 48
+    Width = 159
+    Height = 21
+    TabOrder = 0
+    Items.Strings = (
+      'Cachorro'
+      'Pass'#225'ro '
+      'Gato'
+      'Peixe')
+  end
+  object btnProcessar: TButton
+    Left = 104
+    Top = 78
+    Width = 159
+    Height = 24
+    Caption = 'Processar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object mmHistorico: TMemo
+    Left = 104
+    Top = 112
+    Width = 159
+    Height = 89
+    TabOrder = 2
+  end
+end

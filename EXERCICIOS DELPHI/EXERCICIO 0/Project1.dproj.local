@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/06 18:10:48.000.694,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/09/06 18:13:03.000.323,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Primierio.pas</Transaction>
+    <Transaction>2022/09/06 18:13:03.000.323,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Primierio.dfm</Transaction>
+    <Transaction>2022/09/06 18:13:14.000.976,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Primierio.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Primeiro.dfm</Transaction>
+    <Transaction>2022/09/06 18:13:14.000.976,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Primierio.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Primeiro.pas</Transaction>
+    <Transaction>2022/09/06 18:13:24.000.848,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/09/06 18:13:38.000.041,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\UAnimal.pas</Transaction>
+    <Transaction>2022/09/06 18:13:45.000.300,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/09/06 18:13:58.000.869,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\USecoes.pas</Transaction>
+    <Transaction>2022/09/06 18:18:09.000.507,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\UAnimal.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\UAnimal.pas</Transaction>
+    <Transaction>2022/09/06 18:18:12.000.007,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\USecoes.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\USecoes.pas</Transaction>
+    <Transaction>2022/09/06 18:18:16.000.219,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Primeiro.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\Primeiro.dfm</Transaction>
+    <Transaction>2022/09/06 18:18:16.000.219,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Primeiro.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\Primeiro.pas</Transaction>
+    <Transaction>2022/09/06 18:18:22.000.831,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\Project1.dproj</Transaction>
+    <Transaction>2022/09/06 18:34:00.000.870,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\Primeiro.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\UFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/09/06 18:34:00.000.870,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\Primeiro.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\UFrmPrincipal.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="UFrmPrincipal.pas"/>
+    <File Path="UFrmPrincipal.dfm"/>
+    <File Path="UAnimal.pas"/>
+    <File Path="USecoes.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

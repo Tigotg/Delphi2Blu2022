@@ -1,0 +1,88 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type
+  THora= (opMeioDia = 12, opMeiaNoite = 18)
+
+function Maioridade(const aIdade: Byte): Boolean;
+begin
+  if aIdade >= 18 then
+    Result := True
+  else
+    Result := False;
+
+
+  {if aIdade >= 18 then
+  Begin
+    Result := True
+  End                   (OUTRA FORMA DE IF)
+  else
+  begin
+    Result := False;
+  end;}
+
+  {if aIdade >= 18 then
+    Result := True;
+  begin
+    Result := False;
+  end;}
+
+  (*Result := False;
+  if aIdade >= 18 then
+    Result := True*)
+end;
+
+//function Periodo(const aHora: Byte): String;
+//begin
+//  if aHora < 12 then
+//    Result := 'Bom Dia'
+//  else if aHora < 18 then       (OUTRA OPÇÃOO DE FUNÇÃO)
+//    Result := 'Boa Tarde'
+//  else
+//    Result := 'Boa Noite';
+//end;
+
+function Periodo(const aHora: Byte): String;
+begin
+  if (THora(aHora) < THora.opMeioDia) then
+    Result := 'Bom Dia'
+  else if (Thora(aHora) < THora.opMeiaNoite) then
+    Result := 'Boa Tarde'
+  else
+    Result := 'Boa Noite';
+end;
+
+var
+xIdade: Byte;
+xHora: Byte;
+xStrPeriodo: String;
+xEntrada: String;
+
+begin
+  try
+    writeln('Olá entre com sua idade: ');
+    Readln(xIdade);
+
+    writeln('Entre com o horário: ');
+    Readln(xHora);
+
+    xStrPeriodo := Periodo(xHora);
+
+    if Maioridade(xIdade) then
+      writeln(xStrPeriodo + ' Você é maior de idade.')
+    else
+      writeln(xStrPeriodo + ' Você não é maior de idade.');
+
+    Readln(xEntrada);
+    { TODO -oUser -cConsole Main : Insert code here }
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

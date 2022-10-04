@@ -1,0 +1,74 @@
+unit uFrmExercicio18;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TValidarIdade = Array [0..5] of Integer;
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    btnValidar: TButton;
+  private
+    ValIdade : TValidarIdade;
+    procedure ValidaIdade;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.ValidaIdade;
+var
+  I, xIdade: Integer;
+  const xMaiorIdade: Integer = 18;
+begin
+  xIdade := 0;
+  for I := 0 to Length(ValIdade) do
+  begin
+    ValIdade[I] := StrToInt(inputbox('INFORMAR','Informe uma Idade',''));
+
+    if ValIdade[I] >= xMaiorIdade then
+      ShowMessage('A idade é de maior');
+
+  end;
+
+end;
+
+end.
+
+
+
+//procedure TForm1.btnPercorrerClick(Sender: TObject);
+//begin
+//  PercorrerNumeros;
+//end;
+//
+//procedure TForm1.PercorrerNumeros;
+//var
+//  I: Integer;
+//  xTotal: Integer;
+//const xMaiorIdade: Integer = 18;
+//
+// begin
+//  xTotal := 0;
+//  for I := 1 to Length(ValidaNum) do
+//  begin
+//    ValidaNum[I] := StrToInt(inputbox('INFORMAR','Digite um número',''));
+//
+//    if (ValidaNum[I] >= 10) and (ValidaNum[I] <= 150) then
+//        inc(xTotal);
+//  end;
+//    ShowMessage('A quantidade de números que estão no intervalo entre 10 e 150 é: ' +
+//                xTotal.ToString + ' números.');
+//end;

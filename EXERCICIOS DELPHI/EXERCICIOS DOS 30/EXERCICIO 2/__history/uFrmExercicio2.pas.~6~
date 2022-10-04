@@ -1,0 +1,80 @@
+unit uFrmExercicio2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  //TOperacao(opSoma, opSubtracao, opMultiplicacao, opdiviao);
+  TForm1 = class(TForm)
+    edtNum1: TEdit;
+    edtNum2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    btnResultado: TButton;
+    mmResultadoOperacao: TMemo;
+    lblResultado: TLabel;
+    procedure btnResultadoClick(Sender: TObject);
+  private
+  procedure OperacaoSoma;
+  procedure OperacaoSubtracao;
+  procedure OperacaoMutiplicacao;
+  procedure OperacaoDivisao;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnResultadoClick(Sender: TObject);
+begin
+  OperacaoSoma;
+  OperacaoSubtracao;
+  OperacaoMutiplicacao;
+  OperacaoDivisao;
+end;
+
+procedure TForm1.OperacaoDivisao;
+var
+  xValorDivisao : Double;
+begin
+  xValorDivisao := (StrToFloat(edtNum1.Text)) / (StrToFloat(edtNum2.Text));
+  lblResultado.Caption := FloatToStr(xValorDivisao);
+end;
+
+procedure TForm1.OperacaoMutiplicacao;
+var
+  xValorMultiplicacao : Integer;
+begin
+  xValorMultiplicacao := StrToInt(edtNum1.Text) * StrToInt(edtNum2.Text);
+  lblResultado.Caption := IntToStr(xValorMultiplicacao);
+end;
+
+procedure TForm1.OperacaoSoma;
+var
+  xValorSoma: Integer;
+begin
+  xValorSoma := StrToInt(edtNum1.Text) + StrToInt(edtNum2.Text);
+  lblResultado.Caption := IntToStr(xValorSoma);
+end;
+
+procedure TForm1.OperacaoSubtracao;
+var
+  xValorSubtracao: Integer;
+begin
+  xValorSubtracao := StrToInt(edtNum1.Text) - StrToInt(edtNum2.Text);
+  lblResultado.Caption := IntToStr(xValorSubtracao);
+end;
+
+end.
