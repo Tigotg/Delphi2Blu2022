@@ -1,0 +1,62 @@
+unit uFrmExercicio35;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  //TTipoConsumidor = (tpResidencia, tpComercio, tpIndustria);
+  TForm1 = class(TForm)
+    edtKwh: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    cbxTipoConsumidor: TComboBox;
+    mmHistorico: TMemo;
+    Label4: TLabel;
+    btnCalcular: TButton;
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    procedure CalcularEnergia;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+
+{ TForm1 }
+
+procedure TForm1.btnCalcularClick(Sender: TObject);
+begin
+  CalcularEnergia;
+end;
+
+procedure TForm1.CalcularEnergia;
+var
+  xKwh: Double;
+const
+  xKwh060  = 0.60;
+  xKwh048  = 0.48;
+  xKwh0129 = 1.29;
+begin
+  if cbxTipoConsumidor.ItemIndex = -1 then
+    xKwh := StrToFloat(edtKwh.Text) * xKwh060;
+    if cbxTipoConsumidor.ItemIndex = 0 then
+      xKwh := StrToFloat(edtKwh.Text) * xKwh048
+      else
+        xKwh := StrToFloat(edtKwh.Text) * xKwh0129;
+
+        mmHistorico.Lines.Add('Total da Fatura é: ' + xKwh.ToString);
+end;
+
+end.
