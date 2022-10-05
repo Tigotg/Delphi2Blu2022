@@ -47,16 +47,16 @@ procedure TForm1.CalcularEnergia;
 var
   xKwh: Double;
 const
-  cKwh080 = 0.80;
-  cKwh068 = 0.68;
+  cKwh060 = 0.80;
+  cKwh048 = 0.68;
   cKwh149 = 1.49;
   cKwh318 = 3.18;
 
 begin
   if cbxTipoConsumidor.ItemIndex = 0 then
-    xKwh := (StrToFloat(edtKwh.Text) * cKwh080) -(StrToFloatDef(edtDesconto.Text, 0))
+    xKwh := (StrToFloat(edtKwh.Text) * cKwh060) -(StrToFloatDef(edtDesconto.Text, 0))
   else if cbxTipoConsumidor.ItemIndex = 1 then
-    xKwh := (StrToFloat(edtKwh.Text) * cKwh068)-(StrToFloatDef(edtDesconto.Text,0))
+    xKwh := (StrToFloat(edtKwh.Text) * cKwh048)-(StrToFloatDef(edtDesconto.Text,0))
   else if cbxTipoConsumidor.ItemIndex = 2 then
     xKwh := (StrToFloat(edtKwh.Text) * cKwh149)-(StrToFloatDef(edtDesconto.Text,0))
   else if cbxTipoConsumidor.ItemIndex = 3 then
