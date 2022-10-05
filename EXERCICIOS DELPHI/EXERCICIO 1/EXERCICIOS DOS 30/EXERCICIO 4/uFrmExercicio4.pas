@@ -1,0 +1,91 @@
+unit uFrmExercicio4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    edtVendedor: TEdit;
+    edtSalario: TEdit;
+    edtPercentComissao: TEdit;
+    mmSalarioTotal: TMemo;
+    Label5: TLabel;
+    edtValorVendasMes: TEdit;
+    Label6: TLabel;
+    btnCalcular: TButton;
+    btnLimpaTela: TButton;
+    procedure btnCalcularClick(Sender: TObject);
+    procedure btnLimpaTelaClick(Sender: TObject);
+  private
+  function SalarioMensal: String;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnCalcularClick(Sender: TObject);
+begin
+  mmSalarioTotal.Lines.Add(SalarioMensal);
+end;
+
+procedure TForm1.btnLimpaTelaClick(Sender: TObject);
+begin
+  edtVendedor.Text := '';
+  edtSalario.Text := '';
+  edtPercentComissao.Text := '';
+  edtValorVendasMes.Text := '';
+  mmSalarioTotal.clear;
+
+  edtVendedor.SetFocus;
+end;
+
+function TForm1.SalarioMensal: String;
+var
+  xSalarioFixo: Double;
+  xVendedor: String;
+  xVendasMes: Double;
+  xSalMaisComis: Double;
+  xPercentComiss: Double;
+  xValorComissionado: Double;
+begin
+  xSalMaisComis := 0;
+  xValorComissionado := 0;
+  xVendedor    := edtVendedor.Text;
+  xSalarioFixo := StrToFloat(edtSalario.Text);
+  xVendasMes   := StrToFloat(edtValorVendasMes.Text);
+  xPercentComiss := StrToFloat(edtPercentComissao.Text);
+
+  //FloatToStr(xSalMaisComis) := FloatToStr(xVendasMes) * FloatToStr(xPercentComiss) / 100;
+  xValorComissionado := (xVendasMes) * xPercentComiss / 100;
+  xSalMaisComis := xSalarioFixo + xValorComissionado;
+
+
+  Result := ('Vendedor: ' + xVendedor + #13#10 +
+             'Salário Fixo: ' + xSalarioFixo.ToString + #13#10 +
+             'Total Comissão: ' + xValorComissionado.ToString + #13#10 +
+             'Salário Total + Comissão: ' + xSalMaisComis.ToString + '.');
+end;
+
+end.
+
+
+{Escreva um algoritomo que leia o nome de um vendedor, o salario fixo
+e o total de vendasefetuadas por ele no mes(em dinheiro). Sabendo que
+ganha 15% de comissão sobre as vendas efetuadas, informar o seu nome,
+salario fixo e salario no final do mes}

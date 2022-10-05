@@ -1,0 +1,57 @@
+unit uFrmExercicio1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    edtVisor1: TEdit;
+    edtVisor2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtTotal: TEdit;
+    Label3: TLabel;
+    btnCalcular: TButton;
+    procedure btnCalcularClick(Sender: TObject);
+  private
+  function Soma: Integer;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+
+{ TForm1 }
+
+procedure TForm1.btnCalcularClick(Sender: TObject);
+begin
+   IntToStr(Soma);
+end;
+
+function TForm1.Soma: Integer;
+var
+  xValor, xResultadoSoma: Integer;
+begin
+  xValor := 0;
+
+  xValor := (StrToIntDef(edtVisor1.Text, 0) +
+             StrToIntDef(edtVisor2.Text, 0));
+
+  Result := xValor;
+  edtTotal.Text := IntToStr(xResultadoSoma);
+end;
+
+end.
+
+

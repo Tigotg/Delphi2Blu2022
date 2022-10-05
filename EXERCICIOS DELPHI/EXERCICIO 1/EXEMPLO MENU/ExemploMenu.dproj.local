@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/09/30 18:51:11.914,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 18:52:23.725,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmExemploMenu.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/09/30 18:52:23.725,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmExemploMenu.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 18:52:33.208,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\ExemploMenu.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/09/30 18:58:21.399,=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit2.pas</Transaction>
+    <Transaction>2022/09/30 18:58:38.758,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmCliente.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit2.dfm</Transaction>
+    <Transaction>2022/09/30 18:58:38.758,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmCliente.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit2.pas</Transaction>
+    <Transaction>2022/09/30 18:58:44.706,=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit3.pas</Transaction>
+    <Transaction>2022/09/30 18:59:23.653,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmFornecedores.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit3.pas</Transaction>
+    <Transaction>2022/09/30 18:59:23.653,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmFornecedores.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit3.dfm</Transaction>
+    <Transaction>2022/09/30 18:59:28.206,=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit4.pas</Transaction>
+    <Transaction>2022/09/30 18:59:38.196,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmProdutos.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit4.dfm</Transaction>
+    <Transaction>2022/09/30 18:59:38.196,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmProdutos.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\Unit4.pas</Transaction>
+    <Transaction>2022/09/30 19:00:29.361,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmClientes.pas=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmCliente.pas</Transaction>
+    <Transaction>2022/09/30 19:00:29.361,C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmClientes.dfm=C:\Users\tancleto\Desktop\EXERCICIOS DELPHI\EXEMPLO MENU\uFrmCliente.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

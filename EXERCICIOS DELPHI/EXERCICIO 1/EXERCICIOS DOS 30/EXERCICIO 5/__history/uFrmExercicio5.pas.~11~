@@ -1,0 +1,75 @@
+unit uFrmExercicio5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    edtNota1: TEdit;
+    edtNota2: TEdit;
+    edtNota3: TEdit;
+    edtNomeAluno: TEdit;
+    mmInformativo: TMemo;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    btnCalculaMedia: TButton;
+    btnLimpaTela: TButton;
+    procedure btnLimpaTelaClick(Sender: TObject);
+    procedure btnCalculaMediaClick(Sender: TObject);
+  private
+  procedure CalculaMedia;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnCalculaMediaClick(Sender: TObject);
+begin
+  CalculaMedia;
+end;
+
+procedure TForm1.btnLimpaTelaClick(Sender: TObject);
+begin
+  edtNota1.Clear;
+  edtNota2.Clear;
+  edtNota3.Clear;
+  edtNomeAluno.Clear;
+  mmInformativo.Clear;
+  edtNomeAluno.SetFocus;
+end;
+
+procedure TForm1.CalculaMedia;
+var
+  xNota1, xNota2, xNota3: Double;
+  xSomaMedia: Double;
+  xNomeAluno: String;
+begin
+  xSomaMedia := 0;
+  xNomeAluno := edtNomeAluno.Text;
+  xNota1 := StrToFloat(edtNota1.Text);
+  xNota2 := StrToFloat(edtNota2.Text);
+  xNota3 := StrToFloat(edtNota3.Text);
+
+  xSomaMedia := (xNota1 + xNota2 + xNota3) / 3;
+
+  mmInformativo.Lines.Add('Nome Aluno: ' + xNomeAluno + #13#10 +
+                          'Nota Média: ' +  xResultMedia.ToString);
+end;
+
+end.

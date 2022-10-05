@@ -1,0 +1,54 @@
+unit uFrmTipoDadosRTL;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    btnInteiro: TButton;
+    btnPontoFlutuante: TButton;
+    btnData: TButton;
+    btnDataExtenso: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    lblResultado: TLabel;
+    edtVisor: TEdit;
+    procedure btnInteiroClick(Sender: TObject);
+  private
+    function ConvertTipoDados: String;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnInteiroClick(Sender: TObject);
+begin
+    Self.ConvertTipoDados;
+end;
+
+function TForm1.ConvertTipoDados: String;
+var
+  xResultado: String;
+  xValorRecebido: Integer;
+begin
+  xValorRecebido := 0;
+  xValorRecebido := StrToIntDef(edtVisor.Text, 0) + 10;
+  Result := xResultado;
+
+  if xResultado <> '' then
+    lblResultado.Caption :=  xResultado;
+end;
+
+end.

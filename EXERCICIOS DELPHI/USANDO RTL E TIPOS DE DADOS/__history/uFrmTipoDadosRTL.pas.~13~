@@ -1,0 +1,66 @@
+unit uFrmTipoDadosRTL;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    btnInteiro: TButton;
+    btnPontoFlutuante: TButton;
+    btnData: TButton;
+    btnDataExtenso: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    lblResultado: TLabel;
+    edtVisor: TEdit;
+    procedure btnInteiroClick(Sender: TObject);
+    procedure btnPontoFlutuanteClick(Sender: TObject);
+  private
+    function ConvertInteiro: String;
+    function ConvertPFlutuante: Double;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnInteiroClick(Sender: TObject);
+begin
+    lblResultado.Caption := Self.ConvertInteiro;
+end;
+
+procedure TForm1.btnPontoFlutuanteClick(Sender: TObject);
+begin
+  lblResultado.Caption := FloatToStr(Self.ConvertPFlutuante);
+end;
+
+function TForm1.ConvertInteiro: String;
+var
+  xValorRecebido: Integer;
+begin
+  xValorRecebido := StrToIntDef(edtVisor.Text, 0) + 10;
+
+  Result := IntToStr(xValorRecebido);
+end;
+
+function TForm1.ConvertPFlutuante: Double;
+var
+  xValorRec: Double;
+begin
+  xValorRec := StrToFloatDef(edtVisor.Text, 0) + 10.50;
+
+  Result := xValorRec;
+end;
+
+end.

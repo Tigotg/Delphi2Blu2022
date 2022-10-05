@@ -1,0 +1,75 @@
+unit uFrmSalario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmSalario = class(TForm)
+    edtSalarioMinimo: TEdit;
+    mmHistorico: TMemo;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    procedure AjusteSalario;
+    { Public declarations }
+  end;
+
+var
+  frmSalario: TfrmSalario;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmSalario.AjusteSalario;
+var
+  I : Integer;
+  xSalarioMinimo, xSalario: Double;
+  xFuncionario :String;
+Const
+  x50PercenC = 0.50;
+  x20PercenC = 0.20;
+  x15PercenC = 0.15;
+  x10PercenC = 0.10;
+begin
+  xSalarioMinimo := StrToFloat(edtSalarioMinimo.Text);
+  for I := 1 to 3 do
+  begin
+    xFuncionario := (AnsiUpperCase(InputBox('INFORMAR', 'Nome Colaborador:', '')));
+    xSalario := StrToFloat(AnsiUpperCase(InputBox('INFORMAR', 'Informe o Salário:', '')));
+
+    if xSalario < (xSalarioMinimo * 3) then
+    begin
+      xSalario := (xSalario * x50PercenC);
+    end
+    else if (xSalario >= (xSalarioMinimo * 3)) and (xSalario <= xSalarioMinimo * 10) then
+    begin
+      xSalario := (xSalario * x20PercenC);
+    end
+    else if (xSalario > (xSalarioMinimo * 10)) and (xSalario <= xSalarioMinimo * 20) then
+    begin
+      xSalario := (xSalario * x15PercenC);
+    end
+    else if xSalario > (xSalarioMinimo * 20) then
+      xSalario := (xSalario * x10PercenC);
+  end;
+end;
+
+procedure TfrmSalario.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+  frmSalario  := nil;
+end;
+
+end.
+
+
+
+  a. 50% para aqueles que ganham menos do que três salários mínimos;
+  b. 20% para aqueles que ganham entre três até dez salários mínimos;
+  c. 15% para aqueles que ganham acima de dez até vinte salários mínimos;
+  d. 10% para os demais funcionários.

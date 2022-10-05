@@ -1,0 +1,31 @@
+unit uFrmMenuComExercicio;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TFrmMenuComExercicio = class(TForm)
+    MainMenu1: TMainMenu;
+    ReajusteSalrio1: TMenuItem;
+    ValidarMs1: TMenuItem;
+    Abrir1: TMenuItem;
+    Abrir2: TMenuItem;
+    Lervalores1: TMenuItem;
+    Abrir3: TMenuItem;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmMenuComExercicio: TFrmMenuComExercicio;
+
+implementation
+
+{$R *.dfm}
+
+end.

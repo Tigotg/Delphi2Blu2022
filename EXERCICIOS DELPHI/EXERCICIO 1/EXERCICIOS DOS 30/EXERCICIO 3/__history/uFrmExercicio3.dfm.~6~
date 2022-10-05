@@ -1,0 +1,158 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 415
+  ClientWidth = 587
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 40
+    Top = 24
+    Width = 228
+    Height = 33
+    Caption = 'C'#225'lculo de M'#233'dia'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 40
+    Top = 96
+    Width = 59
+    Height = 16
+    Caption = 'km Inicial'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 190
+    Top = 96
+    Width = 50
+    Height = 16
+    Caption = 'km Final'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 342
+    Top = 96
+    Width = 140
+    Height = 16
+    Caption = 'Consumo Combust'#237'vel'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 40
+    Top = 160
+    Width = 131
+    Height = 16
+    Caption = 'Dist'#226'ncia Percorrida'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 190
+    Top = 160
+    Width = 98
+    Height = 16
+    Caption = 'M'#233'dia Por Litro'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 494
+    Top = 118
+    Width = 14
+    Height = 16
+    Caption = 'LT'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object btnConsumo: TButton
+    Left = 40
+    Top = 216
+    Width = 131
+    Height = 25
+    Caption = 'C'#225'lcular Consumo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = btnConsumoClick
+  end
+  object edtKmInicial: TEdit
+    Left = 40
+    Top = 114
+    Width = 131
+    Height = 21
+    TabOrder = 1
+  end
+  object edtKmFinal: TEdit
+    Left = 190
+    Top = 114
+    Width = 131
+    Height = 21
+    TabOrder = 2
+  end
+  object edtGastoCombustivel: TEdit
+    Left = 342
+    Top = 114
+    Width = 146
+    Height = 21
+    TabOrder = 3
+  end
+  object edtDistanciaPercorrida: TEdit
+    Left = 40
+    Top = 178
+    Width = 131
+    Height = 21
+    TabOrder = 4
+  end
+  object edtTotalConsumo: TEdit
+    Left = 190
+    Top = 178
+    Width = 131
+    Height = 21
+    TabOrder = 5
+  end
+end

@@ -1,0 +1,55 @@
+unit uFrmExercicio25;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Math;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    btnLerIdentificar: TButton;
+    procedure btnLerIdentificarClick(Sender: TObject);
+  private
+    procedure LerDoisNumeros;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnLerIdentificarClick(Sender: TObject);
+begin
+  LerDoisNumeros;
+end;
+
+procedure TForm1.LerDoisNumeros;
+var
+  xNum1, xNum2, xMenorValor, xMaiorValor: Double;
+begin
+  xNum1 := StrToFloat(AnsiUpperCase(InputBox('INFORMAR', 'Digite o 1º Número:', '')));
+  xNum2 := StrToFloat(AnsiUpperCase(InputBox('INFORMAR', 'Digite o 2º Número:', '')));
+  xMenorValor := Min(xNum1, xNum2);
+  xMaiorValor := Max(xNum1, xNum2);
+
+  if xNum1 = xNum2 then
+    ShowMessage('O Números Digitados São Iguais.')
+  else if True then
+
+    ShowMessage('Os Números Digitados são Diferentes.');
+    ShowMessage('O menor número é: ' + FloatToStr(xMenorValor));
+    ShowMessage('O Maior valor é: ' + FloatToStr(xMaiorValor));
+   ///talvez fazer com case
+
+end;
+
+end.

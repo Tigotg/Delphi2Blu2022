@@ -31,7 +31,7 @@ implementation
 procedure TfrmSalario.AjusteSalario;
 var
   I : Integer;
-  xSalarioMinimo, xSalarioAtual, xSalarioFuturo: Double;
+  xSalarioMinimo, xSalarioAtual, xSalarioFuturo, xAumento, xTotFolha: Double;
   xColaborador :String;
 Const
   x50PercenC = 0.50;
@@ -47,21 +47,27 @@ begin
 
     if xSalarioAtual < (xSalarioMinimo * 3) then
     begin
-      xSalarioFuturo := (xSalarioAtual * x50PercenC);
+      xSalarioFuturo := (xSalarioAtual * x50PercenC)+ xSalarioAtual;
+      xAumento := (xSalarioFuturo - xSalarioAtual);
     end
     else if (xSalarioAtual >= (xSalarioMinimo * 3)) and (xSalarioAtual <= xSalarioMinimo * 10) then
     begin
-      xSalarioFuturo := (xSalarioAtual * x20PercenC);
+      xSalarioFuturo := (xSalarioAtual * x20PercenC)+ xSalarioAtual;
+      xAumento := (xSalarioFuturo - xSalarioAtual);
     end
     else if (xSalarioAtual > (xSalarioMinimo * 10)) and (xSalarioAtual <= xSalarioMinimo * 20) then
     begin
-      xSalarioFuturo := (xSalarioAtual * x15PercenC);
+      xSalarioFuturo := (xSalarioAtual * x15PercenC)+ xSalarioAtual;
+      xAumento := (xSalarioFuturo - xSalarioAtual);
     end
     else if xSalarioAtual > (xSalarioMinimo * 20) then
-      xSalarioFuturo := (xSalarioAtual * x10PercenC);
+      xSalarioFuturo := (xSalarioAtual * x10PercenC)+ xSalarioAtual;
+      xAumento := (xSalarioFuturo - xSalarioAtual);
+      mmHistorico.Lines.Add('Colaborador: ' + xColaborador + ' Salário atual: ' + xSalarioAtual.ToString + #13#10+
+                            'Seu Novo Salário é: ' + xSalarioFuturo.ToString + ' Aumento de: ' + xAumento.ToString + #13#10);
+      xTotFolha := (xAumento * I);
   end;
-  mmHistorico.Lines.Add('Colaborador: ' + xColaborador + 'Salário atual: ' + xSalarioAtual.ToString + #13#10+
-                        'Seu Novo Salário é: ' + xSalarioFuturo.ToString);
+  mmHistorico.Lines.Add('O total na folha de pagamento da empresa foi: ' + xTotFolha.ToString);
 end;
 
 procedure TfrmSalario.btnCalcularReajusteClick(Sender: TObject);

@@ -1,0 +1,59 @@
+unit uFrmExercicio24;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    btnIdentificar: TButton;
+    mmListarNumero: TMemo;
+    procedure btnIdentificarClick(Sender: TObject);
+  private
+    procedure LerIdentificarNum;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnIdentificarClick(Sender: TObject);
+begin
+  LerIdentificarNum;
+end;
+
+procedure TForm1.LerIdentificarNum;
+var
+  xNum: Integer;
+begin
+  xNum := StrToInt(AnsiUpperCase(inputBox('INFORMAR', 'Digite um Número:', '')));
+  mmListarNumero.Lines.Add('Número digitado: ' + xNum.ToString);
+  if xNum < 0 then
+  begin
+    mmListarNumero.Lines.Add('O Número ' + xNum.ToString + ' é Negativo.');
+    ShowMessage('O Número ' + xNum.ToString + ' é Negativo.');
+  end
+  else if xNum > 0 then
+  begin
+    ShowMessage('O Número ' + xNum.ToString + ' é Positivo.');
+    mmListarNumero.Lines.Add('O Número ' + xNum.ToString + ' é Positivo.')
+  end
+  else
+  begin
+    ShowMessage('O Numero Digitado é Zero.');
+    mmListarNumero.Lines.Add('O Numero Digitado é Zero.');
+  end;
+end;
+
+end.

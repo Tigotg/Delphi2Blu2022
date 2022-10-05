@@ -1,0 +1,64 @@
+unit uFrmExercicio12;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    edtValorCompra: TEdit;
+    edtPercImposto: TEdit;
+    edtPercDistrib: TEdit;
+    mmPrecoFinal: TMemo;
+    btnCalcular: TButton;
+    btnLimpaTela: TButton;
+    procedure btnCalcularClick(Sender: TObject);
+    procedure btnLimpaTelaClick(Sender: TObject);
+  private
+    procedure CustoCompra;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnCalcularClick(Sender: TObject);
+begin
+  CustoCompra;
+end;
+
+procedure TForm1.btnLimpaTelaClick(Sender: TObject);
+begin
+  edtValorCompra.Clear;
+  edtPercImposto.Clear;
+  edtPercDistrib.Clear;
+  edtValorCompra.SetFocus;
+end;
+
+procedure TForm1.CustoCompra;
+var
+  xValorCompra, xPercImposto, xPercDistrib, xPrecoFinal: Double;
+begin
+  StrToFloat(edtValorCompra.Text) * StrToFloat((edtPercImposto.Text) / 100 + 1);
+  xPrecoFinal := xValorCompra * (StrToFloat(edtPercDistrib.Text) / 100 +1) ;
+
+  mmPrecoFinal.Lines.Add('O custo total do carro fica no valor de: ' + xPrecoFinal.ToString + '.');
+end;
+
+end.
+//VALORCONSUMIDOR = VLFABRICA + %DISTRIBU + IMPOSTOS   ===PRIM IMP DPOIS %DIST SOBRE O RESULTA

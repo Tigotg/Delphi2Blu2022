@@ -1,0 +1,40 @@
+unit UfrmProceduresFunctions;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    btnProcedure: TButton;
+    btnFunction: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+/////PROCEDURES E FUNCTIONS/////
+
+//Isso é uma Procedure
+
+procedure OlaMundo;
+begin
+  ShowMessage('Olá Mundo !!!');
+end;
+
+//Isso é uma Função
+function RetornarNomeSobrenome: String;
+begin
+  Result := 'Tiago Anacleto';
+end;
+end.

@@ -1,0 +1,102 @@
+unit uFrmComandoRepeticao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TTipoRepeticao =(tprFor, tprWhile, tprRepeat);
+
+  TForm1 = class(TForm)
+    lblComandosRepeticao: TLabel;
+    btnExecutar: TButton;
+    edtVisor1: TEdit;
+    edtVisor2: TEdit;
+    rdgCondicao: TRadioGroup;
+    procedure btnExecutarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+function ValidaNumPar(Value1: Integer; Value2: Integer): Integer;
+var
+  I, xResto, xResult: Integer;
+
+begin
+  xResto := 0;
+  xResult := 0;
+  for I := Value1 to Value2 do
+    begin
+      xResto := I mod 2;
+
+      if xResto = 0 then
+      begin
+        xResult := xResult + I;
+      end;
+    end;
+      Result := xResult;
+  end;
+
+
+function SaqueSangria(Valor1: Integer; Valor2: Integer): Integer;
+var
+  xDias: Integer;
+begin
+  xDias := 0;
+  while Valor1 >= Valor2 do
+  begin
+    Valor1 := Valor1 - Valor2;
+    Inc(xDias);
+  end;
+  Result := xDias;
+end;
+
+function MetaFinanceira(Val1: Integer; Val2: Integer): Integer;
+var
+  xMeta: Integer;
+begin
+  xMeta := 0;
+  repeat
+    Val1 := Val1 - Val2;
+    Inc(xMeta);
+  until (val1 <= 0);
+    Result := xMeta;
+end;
+
+
+procedure TForm1.btnExecutarClick(Sender: TObject);
+var
+xTpCondicao: Integer;
+begin
+  case TTipoRepeticao(rdgCondicao.ItemIndex) of
+    tprFor: //FOR
+    begin
+      xTpCondicao := ValidaNumPar (StrToInt(edtVisor1.Text), StrToInt(edtVisor2.Text));
+      ShowMessage('O Resultado da soma dos valores pares é: ' + IntToStr(xTpCondicao));
+    end;
+    tprWhile: //WHILE
+    begin
+      xTpCondicao := SaqueSangria (StrToInt(edtVisor1.Text), StrToInt(edtVisor2.Text));
+      ShowMessage('Em: ' + IntToStr(xTpCondicao) + ' dias o caixa estara zerado.');
+    end;
+    tprRepeat: //REPEAT
+    begin
+      xTpCondicao := MetaFinanceira(StrToInt(edtVisor1.Text), StrToInt(edtVisor2.Text));
+      ShowMessage('Você atingira a sua Meta em: ' + IntToStr(xTpCondicao));
+    end;
+  end;
+end;
+
+end.
