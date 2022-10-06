@@ -1,0 +1,80 @@
+unit uFrmProgramacaoOrientadaObjeto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Math;
+
+type
+  TFrmCalcularAreaTriangulo = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    lblTriangYarea: TLabel;
+    edtTxa: TEdit;
+    edtTxb: TEdit;
+    edtTxc: TEdit;
+    edtTya: TEdit;
+    edtTyb: TEdit;
+    edtTyc: TEdit;
+    Label9: TLabel;
+    lblTriangXArea: TLabel;
+    lblMaiorArea: TLabel;
+    btnCalcular: TButton;
+    btnCalcularOOP: TButton;
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    procedure CalcularTriangulo;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCalcularAreaTriangulo: TFrmCalcularAreaTriangulo;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+
+{ TForm1 }
+
+procedure TFrmCalcularAreaTriangulo.btnCalcularClick(Sender: TObject);
+begin
+  CalcularTriangulo;
+end;
+
+procedure TFrmCalcularAreaTriangulo.CalcularTriangulo;
+var
+  xArea, xPerimetro: Double;
+  xTriangA, xTriangB, xTriangC: Double;
+begin
+  xTriangA := StrToFloatDef(edtTxa.Text, 0);
+  xTriangB := StrToFloatDef(edtTxb.Text, 0);
+  xTriangC := StrToFloatDef(edtTxc.Text, 0);
+
+  xPerimetro := xTriangA + xTriangB + xTriangC/ 2;
+  xArea := Sqrt (xPerimetro * (xPerimetro - xTriangA) * (xPerimetro - xTriangB) * (xPerimetro - xTriangC));
+
+  xTriangA := StrToFloatDef(edtTya.Text, 0);
+  xTriangB := StrToFloatDef(edtTyb.Text, 0);
+  xTriangC := StrToFloatDef(edtTyc.Text, 0);
+
+  xPerimetro := xTriangA + xTriangB + xTriangC/ 2;
+  xArea := Sqrt (xPerimetro * (xPerimetro - xTriangA) * (xPerimetro - xTriangB) * (xPerimetro - xTriangC));
+
+
+  lblTriangXArea.Caption := 'Triângulo X Área: ' + xArea.ToString;
+  lblTriangYArea.Caption := 'Triângulo Y Área: ' + xArea.ToString;
+  lblMaiorArea.Caption := 'Não sei';
+end;
+
+end.

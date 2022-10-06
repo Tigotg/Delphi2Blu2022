@@ -54,7 +54,7 @@ const
 
 begin
   if cbxTipoConsumidor.ItemIndex = 0 then
-    xKwh := (StrToFloat(edtKwh.Text) * cKwh080) -(StrToFloatDef(edtDesconto.Text, 0))
+    xKwh := (StrToFloat(edtKwh.Text) * cKwh080)-(StrToFloatDef(edtDesconto.Text, 0))
   else if cbxTipoConsumidor.ItemIndex = 1 then
     xKwh := (StrToFloat(edtKwh.Text) * cKwh068)-(StrToFloatDef(edtDesconto.Text,0))
   else if cbxTipoConsumidor.ItemIndex = 2 then
@@ -62,8 +62,9 @@ begin
   else if cbxTipoConsumidor.ItemIndex = 3 then
     xKwh := (StrToFloat(edtKwh.Text) * cKwh318)-(StrToFloatDef(edtDesconto.Text, 0));
 
-  mmHistorico.Lines.Add('Tipo de Consumidor: ' + cbxTipoConsumidor.Items[cbxTipoConsumidor.ItemIndex] +
-                        ' Total da Fatura é: ' + FormatFloat('0.00', xKwh));
+  mmHistorico.Lines.Add('Tipo de Consumidor: ' + cbxTipoConsumidor.Items[cbxTipoConsumidor.ItemIndex] + '.' + #13#10 +
+                        'Desconto aplicado foi: ' + FormatFloat('0.00', StrToFloatDef(edtDesconto.Text, 0)) + #13#10 +
+                        'Total da Fatura é: ' + FormatFloat('0.00', xKwh));
 end;
 
 end.

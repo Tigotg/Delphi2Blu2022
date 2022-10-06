@@ -80,6 +80,7 @@ object Form1: TForm1
     Width = 321
     Height = 113
     ReadOnly = True
+    ScrollBars = ssVertical
     TabOrder = 4
   end
   object btnCalcular: TButton
