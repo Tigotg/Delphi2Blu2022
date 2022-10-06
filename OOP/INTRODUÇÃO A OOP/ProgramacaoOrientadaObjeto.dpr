@@ -2,7 +2,8 @@ program ProgramacaoOrientadaObjeto;
 
 uses
   Vcl.Forms,
-  uFrmProgramacaoOrientadaObjeto in 'uFrmProgramacaoOrientadaObjeto.pas' {FrmCalcularAreaTriangulo};
+  uFrmProgramacaoOrientadaObjeto in 'uFrmProgramacaoOrientadaObjeto.pas' {FrmCalcularAreaTriangulo},
+  UTriangulo in 'UTriangulo.pas';
 
 {$R *.res}
 

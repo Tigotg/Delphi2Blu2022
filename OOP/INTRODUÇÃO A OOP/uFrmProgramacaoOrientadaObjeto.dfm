@@ -226,5 +226,6 @@ object FrmCalcularAreaTriangulo: TFrmCalcularAreaTriangulo
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
+    OnClick = btnCalcularOOPClick
   end
 end

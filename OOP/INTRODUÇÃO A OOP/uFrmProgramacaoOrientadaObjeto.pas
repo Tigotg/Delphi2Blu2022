@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Math;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Math, UTriangulo;
 
 type
   TFrmCalcularAreaTriangulo = class(TForm)
@@ -28,8 +28,10 @@ type
     btnCalcular: TButton;
     btnCalcularOOP: TButton;
     procedure btnCalcularClick(Sender: TObject);
+    procedure btnCalcularOOPClick(Sender: TObject);
   private
     procedure CalcularTriangulo;
+    procedure CalculaAreaOOP;
     { Private declarations }
   public
     { Public declarations }
@@ -49,7 +51,54 @@ implementation
 
 procedure TFrmCalcularAreaTriangulo.btnCalcularClick(Sender: TObject);
 begin
-  CalcularTriangulo;
+  Self.CalcularTriangulo;
+end;
+
+procedure TFrmCalcularAreaTriangulo.btnCalcularOOPClick(Sender: TObject);
+begin
+  Self.CalculaAreaOOP;
+end;
+
+procedure TFrmCalcularAreaTriangulo.CalculaAreaOOP;
+var
+  xTrianguloX: TTriangulo;
+  xTrianguloY: TTriangulo;
+
+  xAreaX: Double;
+  xAreaY: Double;
+begin
+  xTrianguloX := TTriangulo.Create;
+  xTrianguloY := TTriangulo.Create;
+
+  try
+    //Primeiro Triângulo
+    xTrianguloX.a := StrToFloatDef(edtTxa.Text, 0);
+    xTrianguloX.b := StrToFloatDef(edtTxb.Text, 0);
+    xTrianguloX.c := StrToFloatDef(edtTxc.Text, 0);
+
+    xAreaX := xTrianguloX.Area;
+
+
+    //Segundo Triângulo
+    xTrianguloY.a := StrToFloatDef(edtTya.Text, 0);
+    xTrianguloY.b := StrToFloatDef(edtTyb.Text, 0);
+    xTrianguloY.c := StrToFloatDef(edtTyc.Text, 0);
+
+    xAreaY := xTrianguloY.Area;
+
+    lblTriangXArea.Caption := 'Triângulo X Área: ' + FormatFloat('0.000', xAreaX);
+    lblTriangYArea.Caption := 'Triângulo Y Área: ' + FormatFloat('0.0000', xAreaY);
+
+    if xAreaY > xAreaX then
+      lblMaiorArea.Caption := 'Triângulo X é maior Triângulo Y'
+    else if xAreaY < xAreaX then
+      lblMaiorArea.Caption := 'Triângulo Y é maior Triângulo X'
+    else
+      lblMaiorArea.Caption := 'Os Dois Triângulos são Iguais';
+  finally
+    FreeAndNil(xTrianguloX);
+    FreeAndNil(xTrianguloY);
+  end;
 end;
 
 procedure TFrmCalcularAreaTriangulo.CalcularTriangulo;
@@ -73,12 +122,14 @@ begin
   xAreaY := Sqrt (xPerimetroY * (xPerimetroY - xTriangA) * (xPerimetroY - xTriangB) * (xPerimetroY - xTriangC));
 
 
-  lblTriangXArea.Caption := 'Triângulo X Área: ' + FormatFloat('0.00', xAreaX);
-  lblTriangYArea.Caption := 'Triângulo Y Área: ' + FormatFloat('0.00', xAreaY);
-  if xAreaY > xAreaX then
-    lblMaiorArea.Caption := 'Triângulo X é maior Triângulo Y'
-  else
-    lblMaiorArea.Caption := 'Triângulo Y é maior Triângulo X';
+  lblTriangXArea.Caption := 'Triângulo X Área: ' + FormatFloat('0.000', xAreaX);
+  lblTriangYArea.Caption := 'Triângulo Y Área: ' + FormatFloat('0.0000', xAreaY);
+    if xAreaY > xAreaX then
+      lblMaiorArea.Caption := 'Triângulo X é maior Triângulo Y'
+    else if xAreaY < xAreaX then
+      lblMaiorArea.Caption := 'Triângulo Y é maior Triângulo X'
+    else
+      lblMaiorArea.Caption := 'Os Dois Triângulos são Iguais';
 end;
 
 end.
