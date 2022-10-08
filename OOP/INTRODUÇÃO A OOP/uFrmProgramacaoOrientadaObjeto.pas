@@ -76,8 +76,12 @@ begin
     xTrianguloX.b := StrToFloatDef(edtTxb.Text, 0);
     xTrianguloX.c := StrToFloatDef(edtTxc.Text, 0);
 
+    //xTrianguloX.D := 10; Não é possivel
+
     xAreaX := xTrianguloX.Area;
 
+    ShowMessage(xTrianguloX.D.ToString);//Property somente leitura
+    ShowMessage(xTrianguloX.A.ToString);
 
     //Segundo Triângulo
     xTrianguloY.a := StrToFloatDef(edtTya.Text, 0);
