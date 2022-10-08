@@ -29,14 +29,9 @@ uses UPessoa;
 
 procedure TForm1.btnResultadoClick(Sender: TObject);
 var
-  xPessoa : TPessoa;
+  xIdade : TPessoa;
 begin
-  xPessoa := TPessoa.Create;
-  try
-    xPessoa.
-  finally
-    FreeAndNil(xPessoa);
-  end;
+  xIdade := TPessoa.Create;
 
 end;
 
