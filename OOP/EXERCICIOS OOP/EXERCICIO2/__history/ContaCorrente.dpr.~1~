@@ -1,0 +1,15 @@
+program ContaCorrente;
+
+uses
+  Vcl.Forms,
+  uContaC in 'uContaC.pas' {Form1},
+  uFrmContaCorrente in 'uFrmContaCorrente.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

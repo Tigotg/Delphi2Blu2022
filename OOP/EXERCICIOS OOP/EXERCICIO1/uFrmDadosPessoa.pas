@@ -6,11 +6,16 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 type
-  TForm1 = class(TForm)
+  TFrmDadosPessoa = class(TForm)
     edtAnoNasc: TEdit;
     Label2: TLabel;
-    mmResultado: TMemo;
     btnResultado: TButton;
+    edtNome: TEdit;
+    Label1: TLabel;
+    edtAltura: TEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    mmResultado: TMemo;
     procedure btnResultadoClick(Sender: TObject);
   private
     { Private declarations }
@@ -19,7 +24,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FrmDadosPessoa: TFrmDadosPessoa;
 
 implementation
 
@@ -27,23 +32,28 @@ uses UPessoa;
 
 {$R *.dfm}
 
-procedure TForm1.btnResultadoClick(Sender: TObject);
+procedure TFrmDadosPessoa.btnResultadoClick(Sender: TObject);
 var
   xPessoa : TPessoa;
 begin
   xPessoa := TPessoa.Create;
+
   try
-    xPessoa.
+    xPessoa.Nome := edtNome.Text;
+    xPessoa.Altura := StrToFloat(edtAltura.Text);
+    xPessoa.DTNasc := StrToDate(edtAnoNasc.Text);
+
+    mmResultado.Lines.Add('Idade Pessoa: ' + Trunc(xPessoa.CalcularIdade).ToString + #13#10 +
+                          xPessoa.ImprimeDados);
   finally
     FreeAndNil(xPessoa);
   end;
 
 end;
 
+{1. Crie uma classe para representar uma Pessoa com os atributos privados de nome,
+data de nascimento e altura.Crie os métodos públicos necessários para getters e setters
+e também um método para imprimir todos dados de uma pessoa.
+Crie um método para calcular a idade da pessoa.}
 end.
-
-
-{1. Crie uma classe para representar uma Pessoa com os atributos privados de nome, data de nascimento e altura.
-    Crie os métodos públicos necessários para getters e setters e também um método para imprimir todos dados de uma pessoa.
-    Crie um método para calcular a idade da pessoa.}
 

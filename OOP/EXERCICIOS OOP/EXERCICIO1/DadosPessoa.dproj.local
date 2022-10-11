@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/10/07 21:06:17.694,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/07 21:07:41.581,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\uFrmDadosPessoa.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/07 21:07:41.581,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\uFrmDadosPessoa.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/10/07 21:07:48.723,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\DadosPessoa.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2022/10/07 21:07:52.773,=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\Unit1.pas</Transaction>
-    <Transaction>2022/10/07 21:08:00.662,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\UPessoa.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\Unit1.pas</Transaction>
+	<Transactions>
+    <Transaction>2022/10/07 21:06:17.000.694,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/07 21:07:41.000.581,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\uFrmDadosPessoa.dfm</Transaction>
+    <Transaction>2022/10/07 21:07:41.000.581,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\uFrmDadosPessoa.pas</Transaction>
+    <Transaction>2022/10/07 21:07:48.000.723,C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\DadosPessoa.dproj</Transaction>
+    <Transaction>2022/10/07 21:07:52.000.773,=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\Unit1.pas</Transaction>
+    <Transaction>2022/10/07 21:08:00.000.662,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\Unit1.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO1\UPessoa.pas</Transaction>
   </Transactions>
 </BorlandProject>

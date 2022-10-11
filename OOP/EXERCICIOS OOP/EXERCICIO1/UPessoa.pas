@@ -23,6 +23,7 @@ type
     property Nome:   String read GetNome write SetNome;
     property DTNasc: Tdate read GetDTNasc write SetDTNasc;
     property Altura: Double read GetAltura write SetAltura;
+    //EX
   end;
 
 implementation
@@ -33,15 +34,14 @@ uses
 { TPessoa }
 
 function TPessoa.CalcularIdade: Double;
-var
-  xAnoNasc: Double;
 begin
-  Result := Date - xAnoNasc;
+  Result := (Date - (FDataNascimento)) / 365.25;
 end;
 
 function TPessoa.ImprimeDados: String;
 begin
-  Result := CalcularIdade.ToString;
+  Result := 'Nome: ' + FNome + ' Altura: ' + FloatToStr(FAltura) + #13#10 +
+            'Data Nascimento: ' + DateToStr(FDataNascimento);
 end;
 
 function TPessoa.GetAltura: Double;

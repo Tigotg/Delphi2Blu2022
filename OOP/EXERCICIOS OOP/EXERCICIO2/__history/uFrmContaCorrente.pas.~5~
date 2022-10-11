@@ -1,0 +1,61 @@
+unit uFrmContaCorrente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UContaC;
+
+type
+  TForm1 = class(TForm)
+    edtNomeCorrentista: TEdit;
+    edtValorSaque: TEdit;
+    edtValorDeposito: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    edtSaldoCC: TEdit;
+    Label4: TLabel;
+    btnMostarInfo: TButton;
+  private
+    { Private declarations }
+    FContaC: TContaCorrente;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.
+
+{1. Crie uma classe para representar uma Pessoa com os atributos privados de nome,
+data de nascimento e altura.
+Crie os métodos públicos necessários para getters e setters e também um método para
+imprimir todos dados de uma pessoa.
+Crie um método para calcular a idade da pessoa.
+
+
+2. Crie uma classe para implementar uma ContaCorrente.
+   A classe deve possuir os seguintes atributos: número da conta,
+   nome do correntista e saldo.
+   Os métodos são os seguintes: alterarNome, depósito e saque;
+   No construtor, saldo é opcional, com valor default zero e os
+   demais atributos são obrigatórios.
+
+Exemplo
+  constructor Create(const aNumeroConta: Integer; const aNomeCorrentista: String; const aSaldo: Currency = 0);
+
+  constructor TContaCorrente.Create(const aNumeroConta: Integer; const aNomeCorrentista: String; const aSaldo);
+  begin
+    FNumeroConta      := aNumeroConta;
+    FNomeCorrentista := aNomeCorrentista;
+    FSaldo                   := aSaldo;
+  end;
+
+  xContaCorrente := TContaCorrente.Create(123, 'Armando Neto');
+  xContaCorrente := TContaCorrente.Create(123, 'Armando Neto', 100);  }

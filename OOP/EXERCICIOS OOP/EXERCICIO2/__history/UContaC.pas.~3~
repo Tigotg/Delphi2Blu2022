@@ -1,0 +1,73 @@
+unit UContaC;
+
+interface
+
+type
+  TContaCorrente = class
+    private
+      FNumeroCC: Integer;
+      FNomeCorrentista: String;
+      FSaldoCC: Currency;
+
+      function GetNumeroCC: Integer;
+      function GetNomeCorrentista: String;
+      function GEtSaldoCC: Currency;
+
+      procedure SetNumeroCC(const aValue: Integer);
+      procedure SetNomeCorrentista(const aValue: String);
+      procedure SetSaldoCC(const aValue: Currency);
+
+    public
+      function DepositoCC: Double;
+      function SaqueCC: Double;
+
+      property NumeroCC   : Integer  read GetNumeroCC    write SetNumeroCC;
+      property NomeCorrentista : String   read GetNomeCorrentista write SetNomeCorrentista;
+      property SaldoCC     : Currency read GEtSaldoCC     write SetSaldoCC;
+  end;
+
+implementation
+
+{ TContaCorrente }
+
+function TContaCorrente.DepositoCC: Double;
+begin
+
+end;
+
+function TContaCorrente.SaqueCC: Double;
+begin
+
+end;
+
+function TContaCorrente.GetNumeroCC: Integer;
+begin
+  Result := FNumeroCC;
+end;
+
+function TContaCorrente.GetNomeCorrentista: String;
+begin
+
+end;
+
+function TContaCorrente.GEtSaldoCC: Currency;
+begin
+  Result := FSaldoCC;
+end;
+
+procedure TContaCorrente.SetNumeroCC(const aValue: Integer);
+begin
+  FNumeroCC := aValue;
+end;
+
+procedure TContaCorrente.SetNomeCorrentista(const aValue: String);
+begin
+  FNomeCorrentista := aValue;
+end;
+
+procedure TContaCorrente.SetSaldoCC(const aValue: Currency);
+begin
+  FSaldoCC := aValue;
+end;
+
+end.
