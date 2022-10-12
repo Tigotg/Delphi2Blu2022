@@ -1,0 +1,50 @@
+unit uPessoaJuridica;
+
+interface
+
+type
+  TPessoaJuridica = class
+    private
+      FCNPJ: String;
+      FIE  : String;
+      procedure SetCNPJ(const pValue: String);
+      procedure SetIE(const pValue: String);
+      function GetCNPJ: String;
+      function GetIE: String;
+    public
+      property CNPJ : String read GetCNPJ write SetCNPJ;
+      property IE   : String read GetIE   write SetIE;
+
+      function ValidaCNPJ(pCNPJ: string): Boolean;
+  end;
+
+implementation
+
+{ TPessoaJuridica }
+
+function TPessoaJuridica.GetCNPJ: String;
+begin
+  Result := FCNPJ;
+end;
+
+function TPessoaJuridica.GetIE: String;
+begin
+  Result := FIE;
+end;
+
+procedure TPessoaJuridica.SetCNPJ(const pValue: String);
+begin
+  FCNPJ := pValue;
+end;
+
+procedure TPessoaJuridica.SetIE(const pValue: String);
+begin
+  FIE := pValue;
+end;
+
+function TPessoaJuridica.ValidaCNPJ(pCNPJ: string): Boolean;
+begin
+
+end;
+
+end.

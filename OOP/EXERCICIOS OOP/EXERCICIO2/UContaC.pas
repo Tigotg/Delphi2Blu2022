@@ -20,8 +20,9 @@ type
     public
       constructor Create(Const aNumeroCC: Integer; const aNomeCorrentista: String; const aSaldo: Currency = 0);
 
-      procedure DepositoCC(var ValorDeposito:Double);
-      procedure SaqueCC (var ValorSaque: Double);
+      procedure DepositoCC(const pValorDeposito:Double);
+      procedure SaqueCC (const pValorSaque: Double);
+      procedure AlterarNome(const pNomeAtual: String);
 
       property NumeroCC        : Integer  read GetNumeroCC        write SetNumeroCC;
       property NomeCorrentista : String   read GetNomeCorrentista write SetNomeCorrentista;
@@ -32,6 +33,11 @@ implementation
 
 { TContaCorrente }
 
+procedure TContaCorrente.AlterarNome(const pNomeAtual: String);
+begin
+  FNomeCorrentista := pNomeAtual;
+end;
+
 constructor TContaCorrente.Create(const aNumeroCC: Integer;
   const aNomeCorrentista: String; const aSaldo: Currency);
 begin
@@ -40,14 +46,14 @@ begin
   FSaldoCC         := aSaldo;
 end;
 
-procedure TContaCorrente.DepositoCC(var ValorDeposito: Double);
+procedure TContaCorrente.DepositoCC(const pValorDeposito: Double);
 begin
-  FSaldoCC := FSaldoCC +
+  FSaldoCC := FSaldoCC + pValorDeposito;
 end;
 
-procedure TContaCorrente.SaqueCC(var ValorSaque: Double);
+procedure TContaCorrente.SaqueCC(const pValorSaque: Double);
 begin
-
+  FSaldoCC := FSaldoCC - pValorSaque;
 end;
 
 function TContaCorrente.GetNumeroCC: Integer;

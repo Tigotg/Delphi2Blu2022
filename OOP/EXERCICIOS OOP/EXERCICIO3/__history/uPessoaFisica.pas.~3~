@@ -1,0 +1,53 @@
+unit uPessoaFisica;
+
+interface
+
+type
+  TPessoaFisica = class
+    private
+      FCPF   : String;
+      FIdade : Byte;
+      function GetCPF: String;
+      function GetIdade: Byte;
+      procedure SetCPF(const pValue: String);
+      procedure SetIdade(const pValue: Byte);
+
+    public
+      property CPF   : String read GetCPF   write SetCPF;
+      property Idade : Byte   read GetIdade write SetIdade;
+
+      function ValidaCPF(pCPF: string): Boolean;
+  end;
+
+implementation
+
+
+
+{ TPessoaFisica }
+
+function TPessoaFisica.GetCPF: String;
+begin
+  Result := FCPF;
+end;
+
+function TPessoaFisica.GetIdade: Byte;
+begin
+  Result := FIdade;
+end;
+
+procedure TPessoaFisica.SetCPF(const pValue: String);
+begin
+  FCPF := pValue;
+end;
+
+procedure TPessoaFisica.SetIdade(const pValue: Byte);
+begin
+  FIdade := pValue;
+end;
+
+function TPessoaFisica.ValidaCPF(pCPF: string): Boolean;
+begin
+
+end;
+
+end.

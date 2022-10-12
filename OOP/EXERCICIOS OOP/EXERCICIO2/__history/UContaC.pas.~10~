@@ -1,0 +1,83 @@
+unit UContaC;
+
+interface
+
+type
+  TContaCorrente = class
+    private
+      FNumeroCC: Integer;
+      FNomeCorrentista: String;
+      FSaldoCC: Currency;
+
+      function GetNumeroCC: Integer;
+      function GetNomeCorrentista: String;
+      function GEtSaldoCC: Currency;
+
+      procedure SetNumeroCC(const aValue: Integer);
+      procedure SetNomeCorrentista(const aValue: String);
+      procedure SetSaldoCC(const aValue: Currency);
+
+    public
+      constructor Create(Const aNumeroCC: Integer; const aNomeCorrentista: String; const aSaldo: Currency = 0);
+
+      procedure DepositoCC(const pValorDeposito:Double);
+      procedure SaqueCC (const pValorSaque: Double);
+
+      property NumeroCC        : Integer  read GetNumeroCC        write SetNumeroCC;
+      property NomeCorrentista : String   read GetNomeCorrentista write SetNomeCorrentista;
+      property SaldoCC         : Currency read GEtSaldoCC         write SetSaldoCC;
+  end;
+
+implementation
+
+{ TContaCorrente }
+
+constructor TContaCorrente.Create(const aNumeroCC: Integer;
+  const aNomeCorrentista: String; const aSaldo: Currency);
+begin
+  FNumeroCC        := aNumeroCC;
+  FNomeCorrentista := aNomeCorrentista;
+  FSaldoCC         := aSaldo;
+end;
+
+procedure TContaCorrente.DepositoCC(const pValorDeposito: Double);
+begin
+  FSaldoCC := FSaldoCC + pValorDeposito;
+end;
+
+procedure TContaCorrente.SaqueCC(const pValorSaque: Double);
+begin
+  FSaldoCC := FSaldoCC - pValorSaque;
+end;
+
+function TContaCorrente.GetNumeroCC: Integer;
+begin
+  Result := FNumeroCC;
+end;
+
+function TContaCorrente.GetNomeCorrentista: String;
+begin
+  Result := FNomeCorrentista
+end;
+
+function TContaCorrente.GEtSaldoCC: Currency;
+begin
+  Result := FSaldoCC;
+end;
+
+procedure TContaCorrente.SetNumeroCC(const aValue: Integer);
+begin
+  FNumeroCC := aValue;
+end;
+
+procedure TContaCorrente.SetNomeCorrentista(const aValue: String);
+begin
+  FNomeCorrentista := aValue;
+end;
+
+procedure TContaCorrente.SetSaldoCC(const aValue: Currency);
+begin
+  FSaldoCC := aValue;
+end;
+
+end.
