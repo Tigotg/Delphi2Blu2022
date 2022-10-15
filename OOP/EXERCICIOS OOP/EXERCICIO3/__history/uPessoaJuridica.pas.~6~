@@ -1,0 +1,124 @@
+unit uPessoaJuridica;
+
+interface
+
+uses uPessoa;
+
+type
+  TPessoaJuridica = class(TPessoa)
+    private
+      FCNPJ: String;
+      FIE  : String;
+      procedure SetCNPJ(const pValue: String);
+      procedure SetIE(const pValue: String);
+      function GetCNPJ: String;
+      function GetIE: String;
+    public
+      property CNPJ : String read GetCNPJ write SetCNPJ;
+      property IE   : String read GetIE   write SetIE;
+
+      function ValidaCNPJ(pCNPJ: string): Boolean;
+      function ImprimeCNPJ(pCNPJ: string): string;
+
+      procedure GravaPessoa(const pPessoa: String); override;
+  end;
+
+implementation
+
+uses SysUtils;
+
+{ TPessoaJuridica }
+
+function TPessoaJuridica.GetCNPJ: String;
+begin
+  Result := FCNPJ;
+end;
+
+function TPessoaJuridica.GetIE: String;
+begin
+  Result := FIE;
+end;
+
+procedure TPessoaJuridica.GravaPessoa(const pPessoa: String);
+begin
+  inherited;
+
+end;
+
+procedure TPessoaJuridica.SetCNPJ(const pValue: String);
+begin
+  FCNPJ := pValue;
+end;
+
+procedure TPessoaJuridica.SetIE(const pValue: String);
+begin
+  FIE := pValue;
+end;
+
+function TPessoaJuridica.ValidaCNPJ(pCNPJ: string): Boolean;
+var   dig13, dig14: string;
+    sm, i, r, peso: integer;
+begin
+// length - retorna o tamanho da string do CNPJ (CNPJ é um número formado por 14 dígitos)
+  if ((pCNPJ = '00000000000000') or (pCNPJ = '11111111111111') or
+      (pCNPJ = '22222222222222') or (pCNPJ = '33333333333333') or
+      (pCNPJ = '44444444444444') or (pCNPJ = '55555555555555') or
+      (pCNPJ = '66666666666666') or (pCNPJ = '77777777777777') or
+      (pCNPJ = '88888888888888') or (pCNPJ = '99999999999999') or
+      (length(pCNPJ) <> 14))
+     then begin
+            ValidaCNPJ := false;
+            exit;
+          end;
+
+// "try" - protege o código para eventuais erros de conversão de tipo através da função "StrToInt"
+  try
+{ *-- Cálculo do 1o. Digito Verificador --* }
+    sm := 0;
+    peso := 2;
+    for i := 12 downto 1 do
+    begin
+// StrToInt converte o i-ésimo caractere do CNPJ em um número
+      sm := sm + (StrToInt(pCNPJ[i]) * peso);
+      peso := peso + 1;
+      if (peso = 10)
+         then peso := 2;
+    end;
+    r := sm mod 11;
+    if ((r = 0) or (r = 1))
+       then dig13 := '0'
+    else str((11-r):1, dig13); // converte um número no respectivo caractere numérico
+
+{ *-- Cálculo do 2o. Digito Verificador --* }
+    sm := 0;
+    peso := 2;
+    for i := 13 downto 1 do
+    begin
+      sm := sm + (StrToInt(pCNPJ[i]) * peso);
+      peso := peso + 1;
+      if (peso = 10)
+         then peso := 2;
+    end;
+    r := sm mod 11;
+    if ((r = 0) or (r = 1))
+       then dig14 := '0'
+    else str((11-r):1, dig14);
+
+{ Verifica se os digitos calculados conferem com os digitos informados. }
+    if ((dig13 = pCNPJ[13]) and (dig14 = pCNPJ[14]))
+       then ValidaCNPJ := true
+    else ValidaCNPJ := false;
+  except
+    ValidaCNPJ := false
+  end;
+end;
+
+function TPessoaJuridica.ImprimeCNPJ(pCNPJ: string): string;
+begin
+  { máscara do CNPJ: 99.999.999.9999-99 }
+  imprimeCNPJ := copy(pCNPJ, 1, 2) + '.' + copy(pCNPJ, 3, 3) + '.' +
+    copy(pCNPJ, 6, 3) + '.' + copy(pCNPJ, 9, 4) + '-' + copy(pCNPJ, 13, 2);
+end;
+
+end.
+

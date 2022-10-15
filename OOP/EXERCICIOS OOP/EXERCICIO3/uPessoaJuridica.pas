@@ -2,8 +2,10 @@ unit uPessoaJuridica;
 
 interface
 
+uses uPessoa;
+
 type
-  TPessoaJuridica = class
+  TPessoaJuridica = class(TPessoa)
     private
       FCNPJ: String;
       FIE  : String;
@@ -16,6 +18,9 @@ type
       property IE   : String read GetIE   write SetIE;
 
       function ValidaCNPJ(pCNPJ: string): Boolean;
+      function ImprimeCNPJ(pCNPJ: string): string;
+
+      procedure GravaPessoa; override;
   end;
 
 implementation
@@ -34,6 +39,12 @@ begin
   Result := FIE;
 end;
 
+procedure TPessoaJuridica.GravaPessoa;
+begin
+if not Self.ValidaCNPJ(FCNPJ) then
+  raise Exception.Create('CNPJ Inválido, Informe um CNPJ Válido');
+end;
+
 procedure TPessoaJuridica.SetCNPJ(const pValue: String);
 begin
   FCNPJ := pValue;
@@ -49,12 +60,12 @@ var   dig13, dig14: string;
     sm, i, r, peso: integer;
 begin
 // length - retorna o tamanho da string do CNPJ (CNPJ é um número formado por 14 dígitos)
-  if ((CNPJ = '00000000000000') or (CNPJ = '11111111111111') or
-      (CNPJ = '22222222222222') or (CNPJ = '33333333333333') or
-      (CNPJ = '44444444444444') or (CNPJ = '55555555555555') or
-      (CNPJ = '66666666666666') or (CNPJ = '77777777777777') or
-      (CNPJ = '88888888888888') or (CNPJ = '99999999999999') or
-      (length(CNPJ) <> 14))
+  if ((pCNPJ = '00000000000000') or (pCNPJ = '11111111111111') or
+      (pCNPJ = '22222222222222') or (pCNPJ = '33333333333333') or
+      (pCNPJ = '44444444444444') or (pCNPJ = '55555555555555') or
+      (pCNPJ = '66666666666666') or (pCNPJ = '77777777777777') or
+      (pCNPJ = '88888888888888') or (pCNPJ = '99999999999999') or
+      (length(pCNPJ) <> 14))
      then begin
             ValidaCNPJ := false;
             exit;
@@ -68,7 +79,7 @@ begin
     for i := 12 downto 1 do
     begin
 // StrToInt converte o i-ésimo caractere do CNPJ em um número
-      sm := sm + (StrToInt(CNPJ[i]) * peso);
+      sm := sm + (StrToInt(pCNPJ[i]) * peso);
       peso := peso + 1;
       if (peso = 10)
          then peso := 2;
@@ -83,7 +94,7 @@ begin
     peso := 2;
     for i := 13 downto 1 do
     begin
-      sm := sm + (StrToInt(CNPJ[i]) * peso);
+      sm := sm + (StrToInt(pCNPJ[i]) * peso);
       peso := peso + 1;
       if (peso = 10)
          then peso := 2;
@@ -94,7 +105,7 @@ begin
     else str((11-r):1, dig14);
 
 { Verifica se os digitos calculados conferem com os digitos informados. }
-    if ((dig13 = CNPJ[13]) and (dig14 = CNPJ[14]))
+    if ((dig13 = pCNPJ[13]) and (dig14 = pCNPJ[14]))
        then ValidaCNPJ := true
     else ValidaCNPJ := false;
   except
@@ -102,11 +113,11 @@ begin
   end;
 end;
 
-function imprimeCNPJ(CNPJ: string): string;
+function TPessoaJuridica.ImprimeCNPJ(pCNPJ: string): string;
 begin
-{ máscara do CNPJ: 99.999.999.9999-99 }
-  imprimeCNPJ := copy(CNPJ, 1, 2) + '.' + copy(CNPJ, 3, 3) + '.' +
-    copy(CNPJ, 6, 3) + '.' + copy(CNPJ, 9, 4) + '-' + copy(CNPJ, 13, 2);
+  { máscara do CNPJ: 99.999.999.9999-99 }
+  imprimeCNPJ := copy(pCNPJ, 1, 2) + '.' + copy(pCNPJ, 3, 3) + '.' +
+    copy(pCNPJ, 6, 3) + '.' + copy(pCNPJ, 9, 4) + '-' + copy(pCNPJ, 13, 2);
 end;
 
 end.

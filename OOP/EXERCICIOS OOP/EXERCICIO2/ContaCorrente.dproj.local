@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/10/10 20:15:49.332,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/10 20:15:56.226,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2022/10/10 20:17:42.309,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaCorrente.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2022/10/10 20:18:11.902,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uContaC.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/10/10 20:18:11.902,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uContaC.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/10 20:18:22.880,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\ContaCorrente.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2022/10/10 20:18:40.018,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaC.dfm=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uContaC.dfm</Transaction>
-    <Transaction>2022/10/10 20:18:40.018,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaC.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uContaC.pas</Transaction>
-    <Transaction>2022/10/10 20:18:53.933,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\UContaC.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaCorrente.pas</Transaction>
-    <Transaction>2022/10/10 20:19:01.959,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaCorrente.dfm=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaC.dfm</Transaction>
-    <Transaction>2022/10/10 20:19:01.959,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaCorrente.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaC.pas</Transaction>
+	<Transactions>
+    <Transaction>2022/10/10 20:15:49.000.332,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/10 20:15:56.000.226,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:17:42.000.309,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaCorrente.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:18:11.000.902,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uContaC.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/10 20:18:11.000.902,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uContaC.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/10 20:18:22.000.880,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\ContaCorrente.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/10 20:18:40.000.018,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaC.dfm=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uContaC.dfm</Transaction>
+    <Transaction>2022/10/10 20:18:40.000.018,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaC.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uContaC.pas</Transaction>
+    <Transaction>2022/10/10 20:18:53.000.933,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\UContaC.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaCorrente.pas</Transaction>
+    <Transaction>2022/10/10 20:19:01.000.959,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaCorrente.dfm=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaC.dfm</Transaction>
+    <Transaction>2022/10/10 20:19:01.000.959,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaCorrente.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO2\uFrmContaC.pas</Transaction>
   </Transactions>
 </BorlandProject>

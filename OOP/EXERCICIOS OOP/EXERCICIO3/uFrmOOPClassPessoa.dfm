@@ -2,8 +2,8 @@ object FrmOOPClassPessoa: TFrmOOPClassPessoa
   Left = 0
   Top = 0
   Caption = 'OOP Class Pessoa'
-  ClientHeight = 281
-  ClientWidth = 418
+  ClientHeight = 496
+  ClientWidth = 401
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,4 +13,97 @@ object FrmOOPClassPessoa: TFrmOOPClassPessoa
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object lblTipoPes: TLabel
+    Left = 25
+    Top = 71
+    Width = 25
+    Height = 13
+    Caption = 'CNPJ'
+  end
+  object Label2: TLabel
+    Left = 23
+    Top = 32
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+  end
+  object Label3: TLabel
+    Left = 5
+    Top = 112
+    Width = 45
+    Height = 13
+    Caption = 'Endere'#231'o'
+  end
+  object Label4: TLabel
+    Left = 57
+    Top = 237
+    Width = 41
+    Height = 13
+    Caption = 'Hist'#243'rico'
+  end
+  object lblIdade_e_IE: TLabel
+    Left = 22
+    Top = 151
+    Width = 28
+    Height = 13
+    Caption = 'Idade'
+  end
+  object edtCPF_CNPJ: TEdit
+    Left = 56
+    Top = 68
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object edtNome: TEdit
+    Left = 56
+    Top = 29
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object edtEndereco: TEdit
+    Left = 56
+    Top = 109
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object btnValidar: TButton
+    Left = 200
+    Top = 107
+    Width = 121
+    Height = 25
+    Caption = 'Validar'
+    TabOrder = 3
+    OnClick = btnValidarClick
+  end
+  object rdgTipoPessoa: TRadioGroup
+    Left = 200
+    Top = 21
+    Width = 121
+    Height = 68
+    Caption = 'Tipo Pessoa'
+    Items.Strings = (
+      'Pessoa F'#237'sica'
+      'Pessoa Jur'#237'dica')
+    TabOrder = 4
+    OnClick = rdgTipoPessoaClick
+  end
+  object mmHistorico: TMemo
+    Left = 56
+    Top = 256
+    Width = 265
+    Height = 193
+    Lines.Strings = (
+      '')
+    TabOrder = 5
+  end
+  object edtIdade: TEdit
+    Left = 57
+    Top = 148
+    Width = 121
+    Height = 21
+    TabOrder = 6
+  end
 end

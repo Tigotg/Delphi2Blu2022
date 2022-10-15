@@ -1,0 +1,81 @@
+unit uFrmOOPClassPessoa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TTipoPessoa = (tpFisica, tpJuridica);
+
+  TFrmOOPClassPessoa = class(TForm)
+    edtCPF_CNPJ: TEdit;
+    edtNome: TEdit;
+    edtEndereco: TEdit;
+    lblTipoPes: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    btnValidar: TButton;
+    rdgTipoPessoa: TRadioGroup;
+    mmHistorico: TMemo;
+    Label4: TLabel;
+    procedure btnValidarClick(Sender: TObject);
+  private
+    procedure GravaPessoa;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmOOPClassPessoa: TFrmOOPClassPessoa;
+
+implementation
+
+{$R *.dfm}
+
+uses uPessoa, uPessoaJuridica, uPessoaFisica;
+
+
+{ TFrmOOPClassPessoa }
+
+procedure TFrmOOPClassPessoa.btnValidarClick(Sender: TObject);
+begin
+  GravaPessoa;
+end;
+
+procedure TFrmOOPClassPessoa.GravaPessoa;
+var
+  xValidaPessoa : TPessoa;
+begin
+  xValidaPessoa := nil;
+  try
+  case TTipoPessoa(rdgTipoPessoa.ItemIndex) of
+    tpFisica:
+    begin
+      xValidaPessoa := TPessoaFisica.Create;
+      TPessoaFisica(xValidaPessoa).CPF := edtCPF_CNPJ.Text; //CAST de Tipos
+      lblTipoPes.Caption := 'CPF';
+    end;
+    tpJuridica:
+    begin
+      xValidaPessoa := TPessoaJuridica.Create;
+      TPessoaJuridica(xValidaPessoa).CNPJ := edtCPF_CNPJ.Text; //CAST de Tipos
+      lblTipoPes.Caption := 'CNPJ';
+    end;
+  end;
+
+  xValidaPessoa.Nome     := edtNome.Text;
+  xValidaPessoa.Endereco := edtEndereco.Text;
+  xValidaPessoa.GravaPessoa;
+
+  mmHistorico.Lines.Add('Nome' + xValidaPessoa.Nome + #13#10 +
+                        'Endereço' + xValidaPessoa.Endereco); //+ #13#10 +
+                        //'CPF' + xValidaPessoa.GravaPessoa());
+  finally
+    FreeAndNil(xValidaPessoa);
+  end;
+end;
+
+end.

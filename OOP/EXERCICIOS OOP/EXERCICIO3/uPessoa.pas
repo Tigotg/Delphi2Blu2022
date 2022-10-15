@@ -10,46 +10,39 @@ type
 
       function GetEndereco: String;
       function GetNome: String;
-      procedure SetEndereco(const Value: String);
-      procedure SetNome(const Value: String);
+      procedure SetEndereco(const pValue: String);
+      procedure SetNome(const pValue: String);
 
     public
       property Nome     : String read GetNome     write SetNome;
       property Endereco : String read GetEndereco write SetEndereco;
-      procedure GravaPessoa(const pPessoa: String);
+      procedure GravaPessoa; virtual; abstract;
+      //procedure GravaPessoa deve ter nas tres units, a classe mãe tem que ter VIRTUAL; ABSTRACT
+      //e nas procedures filhas OVERRIDE
   end;
 
 implementation
 
 { TPessoa }
 
-
-
-{ TPessoa }
-
 function TPessoa.GetEndereco: String;
 begin
-
+  Result := FEndereco;
 end;
 
 function TPessoa.GetNome: String;
 begin
-
+  Result := FNome;
 end;
 
-procedure TPessoa.GravaPessoa(const pPessoa: String);
+procedure TPessoa.SetEndereco(const pValue: String);
 begin
-
+  FEndereco := pValue;
 end;
 
-procedure TPessoa.SetEndereco(const Value: String);
+procedure TPessoa.SetNome(const pValue: String);
 begin
-  FEndereco := Value;
-end;
-
-procedure TPessoa.SetNome(const Value: String);
-begin
-  FNome := Value;
+  FNome := pValue;
 end;
 
 end.
