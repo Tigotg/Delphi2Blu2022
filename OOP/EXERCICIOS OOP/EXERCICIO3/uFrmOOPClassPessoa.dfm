@@ -3,7 +3,7 @@ object FrmOOPClassPessoa: TFrmOOPClassPessoa
   Top = 0
   Caption = 'OOP Class Pessoa'
   ClientHeight = 496
-  ClientWidth = 401
+  ClientWidth = 374
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

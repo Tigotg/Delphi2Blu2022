@@ -1,0 +1,49 @@
+unit uFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, uBombaCombustivel;
+
+type
+  TValorCombustivel = (Gasolina, Alcool, Diesel, GNV);
+  TFrmAbastecer = class(TForm)
+    rdgTipoCombustivel: TRadioGroup;
+    Label1: TLabel;
+    GroupBox1: TGroupBox;
+    Label2: TLabel;
+    edtValAbastecer: TEdit;
+    GroupBox2: TGroupBox;
+    Label8: TLabel;
+    edtQTDLtrsAbatecer: TEdit;
+    edtTotalEmReaisPorLitroAbastecido: TEdit;
+    Label9: TLabel;
+    edtLitrosValAbastecer: TEdit;
+    Label10: TLabel;
+    edtValorGasolina: TEdit;
+    edtValorAlcool: TEdit;
+    edtValorDiesel: TEdit;
+    edtValorGNV: TEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    btnAbastecerPorLitro: TButton;
+    btnAbastecerEmValor: TButton;
+    Button3: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmAbastecer: TFrmAbastecer;
+
+implementation
+
+{$R *.dfm}
+
+
+end.

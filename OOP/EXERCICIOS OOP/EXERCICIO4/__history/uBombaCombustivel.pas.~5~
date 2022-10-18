@@ -1,0 +1,103 @@
+unit uBombaCombustivel;
+
+interface
+
+Uses SysUtils;
+
+//Nessa tela os tratamentos utilizados são dos field da clase (Parametros)
+//Criar primeiro todos os processos da classe para depois ir para o formulário
+type
+  TBombaCombustivel = class
+    private
+      FQtdBomba:  Double;
+      FValorLitro:      Double;
+      FTipoCombustivel: String;
+      procedure SetQtdBomba(const pValue: Double);
+      procedure SetTipoCOmbustivel(const pValue: String);
+      procedure SetValorLitro(const pValue: Double);
+
+      function GetQtdBomba: Double;
+      function GetTipoCombustivel: String;
+      function GetValorLitro: Double;
+
+      procedure AbatecerPorValor(const pValorTotal: Double);
+      procedure AbatecerPorLitro(const pTotalLitro: Double);
+      procedure AlterarValor(const pValorAterado: Double);
+      procedure AlterarTipoCombustivel(const pTipoCombustivel: String);
+      procedure AlterarQTDCombustivel(const pQTDCombust: Double);
+    public
+      property TipoCombustivel : String read GetTipoCombustivel write SetTipoCombustivel;
+      property ValorLitro      : Double read GetValorLitro      write SetValorLitro;
+      property QtdBomba        : Double read GetQtdBomba        write SetQtdBomba;
+  end;
+
+implementation
+
+{ TBombaCombustivel }
+
+procedure TBombaCombustivel.AbatecerPorLitro(const pTotalLitro: Double);
+begin
+  if pTotalLitro > FQtdBomba then
+    raise Exception.Create('Quantidade indisponivel.');
+
+  FQtdBomba := FQtdBomba - pTotalLitro;
+end;
+
+procedure TBombaCombustivel.AbatecerPorValor(const pValorTotal: Double);
+var
+  Resultado: Double;
+begin
+  Resultado := pValorTotal / ValorLitro;
+
+  if Resultado < FQtdBomba then
+    raise Exception.Create('Error Message');
+
+
+end;
+
+procedure TBombaCombustivel.AlterarTipoCombustivel(const pTipoCombustivel: String);
+begin
+
+end;
+
+procedure TBombaCombustivel.AlterarQTDCombustivel(const pQTDCombust: Double);
+begin
+
+end;
+
+procedure TBombaCombustivel.AlterarValor(const pValorAterado: Double);
+begin
+
+end;
+
+function TBombaCombustivel.GetQtdBomba: Double;
+begin
+  Result := FQtdBomba;
+end;
+
+function TBombaCombustivel.GetTipoCOmbustivel: String;
+begin
+  Result := FTipoCOmbustivel;
+end;
+
+function TBombaCombustivel.GetValorLitro: Double;
+begin
+  Result := FValorLitro;
+end;
+
+procedure TBombaCombustivel.SetQtdBomba(const pValue: Double);
+begin
+  FQtdBomba := pValue;
+end;
+
+procedure TBombaCombustivel.SetTipoCOmbustivel(const pValue: String);
+begin
+  FTipoCOmbustivel := pValue;
+end;
+
+procedure TBombaCombustivel.SetValorLitro(const pValue: Double);
+begin
+  FValorLitro := pValue;
+end;
+
+end.

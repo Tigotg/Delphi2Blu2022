@@ -95,12 +95,14 @@ procedure TFrmOOPClassPessoa.rdgTipoPessoaClick(Sender: TObject);
 begin
 if rdgTipoPessoa.ItemIndex = 0 then
 begin
+  lblTipoPes.Caption := 'CPF';
   lblIdade_e_IE.Caption := 'Idade';
-  lblTipoPes.Caption := 'CPF'
 end
 else
+begin
   lblTipoPes.Caption := 'CNPJ';
   lblIdade_e_IE.Caption := 'IE';
+end;
 end;
 
 end.

@@ -13,12 +13,12 @@ type
       procedure SetIE(const pValue: String);
       function GetCNPJ: String;
       function GetIE: String;
-    public
-      property CNPJ : String read GetCNPJ write SetCNPJ;
-      property IE   : String read GetIE   write SetIE;
 
       function ValidaCNPJ(pCNPJ: string): Boolean;
       function ImprimeCNPJ(pCNPJ: string): string;
+    public
+      property CNPJ : String read GetCNPJ write SetCNPJ;
+      property IE   : String read GetIE   write SetIE;
 
       procedure GravaPessoa; override;
   end;

@@ -1,0 +1,10 @@
+unit ufrmPrincipal;
+
+interface
+
+type
+  TC
+
+implementation
+
+end.
