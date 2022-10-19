@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="15e4quvu579d97lre_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:Combustivel:uBombaCombustivel.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Combustivel:uBombaCombustivel.TBombaCombustivel">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="120,60,179,328" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:Combustivel:uBombaCombustivel.TBombaCombustivel.FQtdTanquePosto" />
+      <reference referencedUin="delphi:e_field:src:Combustivel:uBombaCombustivel.TBombaCombustivel.FValorLitro" />
+      <reference referencedUin="delphi:e_field:src:Combustivel:uBombaCombustivel.TBombaCombustivel.FTipoCombustivel" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.SetQtdTanquePosto(System.Double)" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.SetTipoCOmbustivel(System.string)" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.SetValorLitro(System.Double)" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.GetQtdTanquePosto()" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.GetTipoCombustivel()" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.GetValorLitro()" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.AbastecerPorValor(System.Currency)" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.AbastecerPorLitro(System.Currency)" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.AlterarValor(System.Double)" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.AlterarTipoCombustivel(System.string)" />
+      <reference referencedUin="delphi:e_method:src:Combustivel:uBombaCombustivel.TBombaCombustivel.AlterarQTDCombustivel(System.Double)" />
+      <reference referencedUin="delphi:e_property:src:Combustivel:uBombaCombustivel.TBombaCombustivel.TipoCombustivel" />
+      <reference referencedUin="delphi:e_property:src:Combustivel:uBombaCombustivel.TBombaCombustivel.ValorLitro" />
+      <reference referencedUin="delphi:e_property:src:Combustivel:uBombaCombustivel.TBombaCombustivel.QtdTanquePosto" />
+    </reference>
+  </view>
+</nodeSet>

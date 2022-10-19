@@ -11,6 +11,8 @@ object FrmAbastecer: TFrmAbastecer
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -43,6 +45,7 @@ object FrmAbastecer: TFrmAbastecer
       'Diesel')
     ParentFont = False
     TabOrder = 0
+    OnClick = rdgTipoCombustivelClick
   end
   object GroupBox1: TGroupBox
     Left = 22
@@ -189,6 +192,7 @@ object FrmAbastecer: TFrmAbastecer
     Height = 25
     Caption = 'Abastecer Por Litro'
     TabOrder = 3
+    OnClick = btnAbastecerPorLitroClick
   end
   object btnAbastecerEmValor: TButton
     Left = 22
@@ -197,6 +201,7 @@ object FrmAbastecer: TFrmAbastecer
     Height = 25
     Caption = 'Abastecer Em Valor'
     TabOrder = 4
+    OnClick = btnAbastecerEmValorClick
   end
   object btnAlterarValor: TButton
     Left = 22
@@ -205,6 +210,7 @@ object FrmAbastecer: TFrmAbastecer
     Height = 25
     Caption = 'Alterar Valor'
     TabOrder = 5
+    OnClick = btnAlterarValorClick
   end
   object btnAlterarCombustivel: TButton
     Left = 163
@@ -213,6 +219,7 @@ object FrmAbastecer: TFrmAbastecer
     Height = 25
     Caption = 'Alterar Combust'#237'vel'
     TabOrder = 6
+    OnClick = btnAlterarCombustivelClick
   end
   object btnAlterarQtdCombustivel: TButton
     Left = 301
@@ -221,5 +228,20 @@ object FrmAbastecer: TFrmAbastecer
     Height = 25
     Caption = 'Alterar Qtd Combust'#237'vel'
     TabOrder = 7
+    OnClick = btnAlterarQtdCombustivelClick
+  end
+  object edtDisplayCombustivel: TEdit
+    Left = 440
+    Top = 186
+    Width = 141
+    Height = 21
+    TabOrder = 8
+  end
+  object edtTotalTanquePosto: TEdit
+    Left = 440
+    Top = 56
+    Width = 121
+    Height = 21
+    TabOrder = 9
   end
 end

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="5wpnt00ktq6rvgkvr_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::j0il2dnuw09lgu09s_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,123,134" />
+      <reference referencedUin="delphi:e_class:src:Combustivel:Combustivel.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::15e4quvu579d97lre_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="152,1,138,134" />
+      <property name="hideClass" value="False" />
+      <property name="hideModule" value="True" />
+      <reference referencedUin="delphi:e_class:src:Combustivel:uBombaCombustivel.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:Combustivel:uBombaCombustivel.TBombaCombustivel" />
+    </reference>
+    <reference referencedUin="design:view:::7xta9wcnwe99f5hxt_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="133,163,132,183" />
+      <reference referencedUin="delphi:e_class:src:Combustivel:uFrmPrincipal.TValorCombustivel" />
+      <reference referencedUin="delphi:e_class:src:Combustivel:uFrmPrincipal.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:Combustivel:uFrmPrincipal.TFrmAbastecer" />
+    </reference>
+  </view>
+</nodeSet>

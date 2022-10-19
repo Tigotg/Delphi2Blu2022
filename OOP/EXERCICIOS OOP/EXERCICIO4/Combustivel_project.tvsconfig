@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.uBombaCombustivel" Type="System.String" Value="uBombaCombustivel" Category="General" IsBrowsable="False" />
+</TgConfig>
