@@ -1,0 +1,20 @@
+unit uAgregacao;
+
+interface
+
+uses
+  System.TDateTime;
+
+type
+  TTime = class
+    private
+      FNomeTime: String;
+      FTecnico: String;
+      FAnoFundacao: Date;
+    public
+
+  end;
+
+implementation
+
+end.

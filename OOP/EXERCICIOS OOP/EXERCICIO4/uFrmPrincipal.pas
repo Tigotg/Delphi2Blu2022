@@ -25,6 +25,8 @@ type
     btnAlterarQtdCombustivel: TButton;
     edtDisplayCombustivel: TEdit;
     edtTotalTanquePosto: TEdit;
+    Label3: TLabel;
+    Label4: TLabel;
     Procedure TipoCombustivel;
     procedure btnAbastecerEmValorClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -67,13 +69,13 @@ end;
 procedure TFrmAbastecer.btnAlterarCombustivelClick(Sender: TObject);
 begin
   xCombustivel.AlterarTipoCombustivel(UpperCase(InputBox('Tipo', 'Digite o Tipo Combustível', '')));
-
-  if xCombustivel.TipoCombustivel = UpperCase('GASOLINA') then
-    rdgTipoCombustivel.ItemIndex := 0
-  else if xCombustivel.TipoCombustivel = 'ALCOOL' then
-    rdgTipoCombustivel.ItemIndex := 1
-  else if xCombustivel.TipoCombustivel = 'DIESEL' then
-    rdgTipoCombustivel.ItemIndex := 2;
+  xCombustivel.TipoCombustivel;
+  //  if xCombustivel.TipoCombustivel = UpperCase('GASOLINA') then
+//    rdgTipoCombustivel.ItemIndex := 0
+//  else if xCombustivel.TipoCombustivel = 'ALCOOL' then
+//    rdgTipoCombustivel.ItemIndex := 1
+//  else if xCombustivel.TipoCombustivel = 'DIESEL' then
+//    rdgTipoCombustivel.ItemIndex := 2;
 end;
 
 procedure TFrmAbastecer.btnAlterarQtdCombustivelClick(Sender: TObject);

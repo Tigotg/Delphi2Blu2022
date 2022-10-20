@@ -65,8 +65,10 @@ end;
 
 procedure TBombaCombustivel.AlterarTipoCombustivel(const pTipoCombustivel: String);
 begin
-  if (pTipoCombustivel <> 'Gasolina') or (pTipoCombustivel <> 'Alcool') or (pTipoCombustivel <> 'Diesel') then
+  if (pTipoCombustivel <> 'GASOLINA') and (pTipoCombustivel <> 'ALCOOL') and (pTipoCombustivel <> 'DIESEL') then
     raise Exception.Create('Combustível Inválido');
+
+    //Self.AlterarQTDCombustivel(QtdTanquePosto);
 
   FTipoCombustivel := pTipoCombustivel;
 end;

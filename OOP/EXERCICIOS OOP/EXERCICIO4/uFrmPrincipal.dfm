@@ -28,6 +28,32 @@ object FrmAbastecer: TFrmAbastecer
     Font.Style = [fsBold]
     ParentFont = False
   end
+  object Label3: TLabel
+    Left = 437
+    Top = 36
+    Width = 146
+    Height = 14
+    Caption = 'Quantido Tanque Posto'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 440
+    Top = 194
+    Width = 89
+    Height = 14
+    Caption = 'Valor Por Litro'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object rdgTipoCombustivel: TRadioGroup
     Left = 440
     Top = 83
@@ -232,7 +258,7 @@ object FrmAbastecer: TFrmAbastecer
   end
   object edtDisplayCombustivel: TEdit
     Left = 440
-    Top = 186
+    Top = 214
     Width = 141
     Height = 21
     TabOrder = 8
@@ -240,7 +266,7 @@ object FrmAbastecer: TFrmAbastecer
   object edtTotalTanquePosto: TEdit
     Left = 440
     Top = 56
-    Width = 121
+    Width = 141
     Height = 21
     TabOrder = 9
   end

@@ -1,0 +1,62 @@
+unit uTime;
+
+interface
+
+uses
+  System.DateUtils;
+
+type
+  TTime = class
+    private
+      FNomeTime: String;
+      FTecnico: String;
+      FAnoFundacao: TDate;
+
+      function GetAnoFundacao: TDate;
+      function GetNomeTime: String;
+      function GetTecnico: String;
+
+      procedure SetAnoFundacao(const pValue: TDate);
+      procedure SetNomeTime(const pValue: String);
+      procedure SetTecnico(const pValue: String);
+    public
+      property NomeTime    : String read GetNomeTime    write SetNomeTime;
+      property Tecnico     : String read GetTecnico     write SetTecnico;
+      property AnoFundacao : TDate   read GetAnoFundacao write SetAnoFundacao;
+  end;
+
+implementation
+
+{ TTime }
+
+function TTime.GetAnoFundacao: TDate;
+begin
+  Result := FAnoFundacao;
+end;
+
+function TTime.GetNomeTime: String;
+begin
+  Result := FNomeTime;
+end;
+
+function TTime.GetTecnico: String;
+begin
+  Result := FTecnico;
+end;
+
+procedure TTime.SetAnoFundacao(const pValue: TDate);
+begin
+  FAnoFundacao := pValue;
+end;
+
+procedure TTime.SetNomeTime(const pValue: String);
+begin
+  FNomeTime := pValue;
+end;
+
+procedure TTime.SetTecnico(const pValue: String);
+begin
+  FTecnico := pValue;
+end;
+
+end.
