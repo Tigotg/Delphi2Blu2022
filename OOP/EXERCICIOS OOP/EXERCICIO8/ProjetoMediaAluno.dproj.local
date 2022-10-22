@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/10/21 21:22:35.455,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 21:22:46.490,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/21 21:22:52.755,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/21 21:24:10.225,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO8\uFrmPrincipal.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 21:24:10.225,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO8\uFrmPrincipal.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/21 21:24:33.694,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO8\uAluno.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/21 21:24:46.483,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO8\uDisciplina.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/21 21:25:52.414,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO8\ProjetoMediaAluno.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,15 @@
+program ProjetoFuncaoElevador;
+
+uses
+  Vcl.Forms,
+  uFrmPrincipal in 'uFrmPrincipal.pas' {FrmElevador},
+  uElevador in 'uElevador.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  AApplication.CreateForm(TFrmElevador, FrmElevador);
+  pplication.Run;
+end.

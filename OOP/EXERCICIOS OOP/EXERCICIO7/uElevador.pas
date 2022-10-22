@@ -12,6 +12,7 @@ type
       FQTDAndares: Integer;
       FQTDPessoas: Integer;
       FCapacidadeCarga: Integer;
+
       procedure SetAndar(const pValue: Integer);
       procedure SetCapacidadeCarga(const pValue: Integer);
       procedure SetQTDPessoas(const pValue: Integer);
@@ -22,7 +23,7 @@ type
       function GetQTDPessoas: Integer;
       function GetQTDAndares: Integer;
     public
-      Constructor Create(const CapacidadePessoas: Integer; TotalAndares: Integer; AndarInic: Integer = 0);
+      Constructor Create(const TotalAndar: Integer; CapacidadePessoas: Integer; AndarInic: Integer = 0);
 
       property Andar: Integer           read GetAndar           write SetAndar;
       property QTDPessoas: Integer      read GetQTDPessoas      write SetQTDPessoas;
@@ -31,44 +32,64 @@ type
 
       function Entrar(const pNumPesEntrou: Integer): Integer;
       function Sair(const pNumPesSaiu: Integer):Integer;
-      function Subir: String;
-      function Descer: String;
+      function Subir(const pSobAndar: Integer): Integer;
+      function Descer(const pDescAndar: Integer): Integer;
   end;
 
 implementation
 
 { TElevador }
 
-constructor TElevador.Create(const CapacidadePessoas: Integer; TotalAndares,
-  AndarInic: Integer);
+constructor TElevador.Create(const TotalAndar: Integer; CapacidadePessoas: Integer; AndarInic: Integer);
 begin
-  FQTDAndares := TotalAndares;
+  FQTDAndares := TotalAndar;
   FCapacidadeCarga := CapacidadePessoas;
   FAndar := AndarInic;
 end;
 
-function TElevador.Descer: String;
+function TElevador.Descer(const pDescAndar: Integer): Integer;
 begin
-  if FAndar <= FQTDAndares  then
+  if FAndar + pDescAndar <= FQTDAndares  then
+    FAndar := pDescAndar - FAndar;
     ShowMessage('Descendo... Descendo... Descendo');
 end;
 
-function TElevador.Subir: String;
+function TElevador.Subir(const pSobAndar: Integer): Integer;
 begin
-  if FAndar >= FQTDAndares then
-    ShowMessage('Subindo... Subindo... Subindo');
-end;
+  if FAndar + pSobAndar >= FQTDAndares then
+    begin
+      FAndar := pSobAndar + FAndar;
+      ShowMessage('Subindo... Subindo... Subindo');
+    end
+  else  if True then
 
+end;
 
 function TElevador.Entrar(const pNumPesEntrou: Integer): Integer;
 begin
-  if FQTDPessoas < FCapacidadeCarga then
-    FCapacidadeCarga := FQTDPessoas;
+  if FQTDPessoas + pNumPesEntrou < FCapacidadeCarga then
+    begin
+      FQTDPessoas := FQTDPessoas + pNumPesEntrou;
+      ShowMessage('Entrou Pessoa(s)');
+    end
+  else
+    ShowMessage('Não a Mais Lugar');
 end;
 
 function TElevador.Sair(const pNumPesSaiu: Integer): Integer;
 begin
-
+  if pNumPesSaiu >= 1 then
+    begin
+      FQTDPessoas := FQTDPessoas - pNumPesSaiu;
+      ShowMessage('Saiu Pessoa(s).');
+    end
+    else if FQTDPessoas + pNumPesSaiu >= 1 then
+    begin
+      FQTDPessoas := FQTDPessoas - pNumPesSaiu;
+      ShowMessage('Saiu Pessoa(s)');
+    end
+    else if pNumPesSaiu <= 0 then
+      ShowMessage('Não á Pessoa para Descer');
 end;
 
 function TElevador.GetAndar: Integer;

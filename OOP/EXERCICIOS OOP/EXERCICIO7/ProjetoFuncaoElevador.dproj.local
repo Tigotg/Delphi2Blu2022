@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/10/19 20:59:14.512,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/19 21:00:24.089,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\uFrmPrincipal.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/19 21:00:24.089,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\uFrmPrincipal.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/10/19 21:00:44.853,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\ProjetoFuncaoElevador.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2022/10/19 21:00:52.674,=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\Unit1.pas</Transaction>
-    <Transaction>2022/10/19 21:01:22.022,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\uElevador.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\Unit1.pas</Transaction>
+	<Transactions>
+    <Transaction>2022/10/19 20:59:14.000.512,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 21:00:24.000.089,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\uFrmPrincipal.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/19 21:00:24.000.089,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\uFrmPrincipal.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 21:00:44.000.853,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\ProjetoFuncaoElevador.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/19 21:00:52.000.674,=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 21:01:22.000.022,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\uElevador.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\EXERCICIO7\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

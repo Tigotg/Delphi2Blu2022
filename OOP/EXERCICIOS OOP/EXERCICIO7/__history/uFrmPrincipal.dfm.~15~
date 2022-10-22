@@ -1,0 +1,204 @@
+﻿object FrmElevador: TFrmElevador
+  Left = 0
+  Top = 0
+  Caption = 'Elevador'
+  ClientHeight = 643
+  ClientWidth = 852
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 30
+    Top = 39
+    Width = 133
+    Height = 16
+    Caption = 'Quantidade Andares'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 29
+    Top = 78
+    Width = 134
+    Height = 16
+    Caption = 'Capacidade Elevador'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 32
+    Top = 115
+    Width = 131
+    Height = 16
+    Caption = 'Quantidade Pessoas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 123
+    Top = 152
+    Width = 40
+    Height = 16
+    Caption = 'Andar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 320
+    Top = 17
+    Width = 57
+    Height = 16
+    Caption = 'Hist'#243'rico'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Resultado: TLabel
+    Left = 98
+    Top = 189
+    Width = 65
+    Height = 16
+    Caption = 'Resultado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edtQTDAndares: TEdit
+    Left = 176
+    Top = 38
+    Width = 121
+    Height = 21
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 0
+    TextHint = 'QTD Andares'
+  end
+  object edtCapacidadeElev: TEdit
+    Left = 176
+    Top = 77
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    TextHint = 'Capacidade Elevador'
+  end
+  object edtQTDPessoas: TEdit
+    Left = 176
+    Top = 114
+    Width = 121
+    Height = 21
+    TabOrder = 2
+    TextHint = 'Quantidade Pessoas'
+  end
+  object edtAndar: TEdit
+    Left = 176
+    Top = 151
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    TextHint = 'Andar'
+  end
+  object btnEntraPessoa: TButton
+    Left = 141
+    Top = 565
+    Width = 75
+    Height = 25
+    Caption = 'Entra Pessoa'
+    TabOrder = 4
+  end
+  object btnSairPessoa: TButton
+    Left = 253
+    Top = 565
+    Width = 75
+    Height = 25
+    Caption = 'Sair Pessoa'
+    TabOrder = 5
+  end
+  object btnSubir: TButton
+    Left = 365
+    Top = 565
+    Width = 75
+    Height = 25
+    Caption = 'Subir'
+    TabOrder = 6
+  end
+  object btnDescer: TButton
+    Left = 477
+    Top = 565
+    Width = 75
+    Height = 25
+    Caption = 'Descer'
+    TabOrder = 7
+  end
+  object mmHistórico: TMemo
+    Left = 320
+    Top = 39
+    Width = 297
+    Height = 170
+    ScrollBars = ssVertical
+    TabOrder = 8
+  end
+  object btnIniciar: TButton
+    Left = 29
+    Top = 565
+    Width = 75
+    Height = 25
+    Caption = 'Iniciar'
+    TabOrder = 9
+    OnClick = btnIniciarClick
+  end
+  object edtResultado: TEdit
+    Left = 176
+    Top = 188
+    Width = 121
+    Height = 21
+    TabOrder = 10
+    TextHint = 'Resultado'
+  end
+  object rdgFuncElevador: TRadioGroup
+    Left = 20
+    Top = 224
+    Width = 157
+    Height = 129
+    Caption = 'Func'#245'es Elevador'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    Items.Strings = (
+      'Subir'
+      'Descer'
+      'Entrar'
+      'Sair')
+    ParentFont = False
+    TabOrder = 11
+  end
+end

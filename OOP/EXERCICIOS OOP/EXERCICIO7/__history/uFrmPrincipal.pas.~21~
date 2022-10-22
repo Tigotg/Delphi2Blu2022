@@ -1,0 +1,102 @@
+unit uFrmPrincipal;
+interface
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, uElevador;
+type
+  TFrmElevador = class(TForm)
+    edtQTDAndares: TEdit;
+    edtCapacidadeElev: TEdit;
+    edtQTDPessoas: TEdit;
+    edtAndar: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    btnEntraPessoa: TButton;
+    btnSairPessoa: TButton;
+    btnSubir: TButton;
+    btnDescer: TButton;
+    mmHistórico: TMemo;
+    btnIniciar: TButton;
+    Resultado: TLabel;
+    edtResultado: TEdit;
+    procedure btnIniciarClick(Sender: TObject);
+    procedure btnEntraPessoaClick(Sender: TObject);
+    procedure btnSubirClick(Sender: TObject);
+    procedure btnDescerClick(Sender: TObject);
+    procedure btnSairPessoaClick(Sender: TObject);
+  private
+    FPesso_elevador : TElevador;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+
+var
+  FrmElevador: TFrmElevador;
+
+
+implementation
+{$R *.dfm}
+
+procedure TFrmElevador.btnDescerClick(Sender: TObject);
+begin
+  FPesso_elevador.Subir(StrToInt(edtAndar.Text));
+  mmHistórico.Lines.Add('Estamos no  ' + edtAndar.Text + 'º Andar.');
+end;
+
+procedure TFrmElevador.btnEntraPessoaClick(Sender: TObject);
+begin
+  FPesso_elevador.Entrar(StrToInt(edtQTDPessoas.Text));
+  mmHistórico.Lines.Add('Entrou ' + edtQTDPessoas.Text + ' Pessoas do Elevador');
+end;
+
+procedure TFrmElevador.btnIniciarClick(Sender: TObject);
+begin
+  //edtQTDAndares.Text := InputBox('Informe:', 'Digite Quantidade de andares: ','');
+  FPesso_elevador.QTDAndares := StrToInt(edtQTDAndares.Text);
+
+  //edtCapacidadeElev.Text := InputBox('Informe:', 'Digite a Capacidade de carga do elevador: ', '');
+  FPesso_elevador.CapacidadeCarga := StrToInt(edtCapacidadeElev.Text);
+
+  FPesso_elevador :=  TElevador.Create(StrToInt(edtQTDAndares.Text), StrToInt(edtCapacidadeElev.Text))
+end;
+
+procedure TFrmElevador.btnSairPessoaClick(Sender: TObject);
+begin
+  FPesso_elevador.Sair(StrToInt(edtQTDPessoas.Text));
+  mmHistórico.Lines.Add('Saiu ' + edtQTDPessoas.Text + ' Pessoas do Elevador');
+end;
+
+procedure TFrmElevador.btnSubirClick(Sender: TObject);
+begin
+  FPesso_elevador.Subir(StrToInt(edtAndar.Text));
+  mmHistórico.Lines.Add('Estamos no  ' + edtAndar.Text + 'º Andar.');
+end;
+
+end.
+
+
+
+{4. Crie uma classe denominada Elevador para armazenar as informações
+de um elevador dentro de um prédio.
+A classe deve armazenar o andar atual (térreo = 0), total de
+andares no prédio (desconsiderando o térreo), capacidade do
+elevador e quantas pessoas estão presentes nele.
+A classe deve também disponibilizar os seguintes métodos:
+
+   a.	Inicializa: que deve receber como parâmetros a capacidade
+   do elevador e o total de andares no prédio
+   (os elevadores sempre começam no térreo e vazio - usar o constructor);
+   b.	Entra: para acrescentar uma pessoa no elevador
+   (só deve acrescentar se ainda houver espaço);
+   c.	Sai: para remover uma pessoa do elevador
+   (só deve remover se houver alguém dentro dele);
+   d.	Sobe: para subir um andar
+   (não deve subir se já estiver no último andar);
+   e.	Desce: para descer um andar
+   (não deve descer se já estiver no térreo); }
+
