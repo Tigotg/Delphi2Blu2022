@@ -10,7 +10,8 @@ type
   TBombaCombustivel = class
     private
       FQtdTanquePosto:  Double;  //Atributo ou Field
-      FValorLitro:      Double;
+      FValorLitro:      Double;  //esse valor veio através do edtDisplayCombustivel.Text
+
       FTipoCombustivel: String;
 
       procedure SetQtdTanquePosto(const pValue: Double);
@@ -75,7 +76,7 @@ end;
 
 procedure TBombaCombustivel.AlterarQTDCombustivel(const pQTDCombust: Double);
 begin
-  FQtdTanquePosto := FQtdTanquePosto - pQTDCombust;
+  FQtdTanquePosto := FQtdTanquePosto - pQTDCombust;  //GetQtdTanquePosto
 end;
 
 procedure TBombaCombustivel.AlterarValor(const pValorAbastecerAterado: Double);

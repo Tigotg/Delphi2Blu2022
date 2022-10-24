@@ -30,10 +30,10 @@ type
       property CapacidadeCarga: Integer read GetCapacidadeCarga write SetCapacidadeCarga;
       property QTDAndares: Integer      read GetQTDAndares      write SetQTDAndares;
 
-      function Entrar(const pNumPesEntrou: Integer): Integer;
-      function Sair(const pNumPesSaiu: Integer):Integer;
-      function Subir(const pSobAndar: Integer): Integer;
-      function Descer(const pDescAndar: Integer): Integer;
+      function Entrar(const pPessoasMaisTotal: Integer): String;
+      function Sair(const pPessoasMaisTotal: Integer):String;
+      function Subir(const pSobAndar: Integer): String;
+      function Descer(const pDescAndar: Integer): String;
   end;
 
 implementation
@@ -47,49 +47,55 @@ begin
   FAndar := AndarInic;
 end;
 
-function TElevador.Descer(const pDescAndar: Integer): Integer;
+function TElevador.Descer(const pDescAndar: Integer): String;
 begin
-  if FAndar + pDescAndar <= FQTDAndares  then
-    FAndar := pDescAndar - FAndar;
-    ShowMessage('Descendo... Descendo... Descendo');
+  Result := '';
+
+  if pDescAndar <= 0 then
+    Result := 'Não tem SubSolo!!!';
+
+  if Result = '' then
+  begin
+    FAndar := FAndar - 1;
+  end;
 end;
 
-function TElevador.Subir(const pSobAndar: Integer): Integer;
+function TElevador.Subir(const pSobAndar: Integer): String;
 begin
-  if FAndar + pSobAndar >= FQTDAndares then
-    begin
-      FAndar := pSobAndar + FAndar;
-      ShowMessage('Subindo... Subindo... Subindo');
-    end
-  else  if True then
+  Result := '';
+  if pSobAndar > QTDAndares then
+    Result := 'Estamos no último Andar, Não é possível subir mais!!!';
 
+  if Result = '' then
+  begin
+    FAndar := FAndar + 1;
+  end;
 end;
 
-function TElevador.Entrar(const pNumPesEntrou: Integer): Integer;
+function TElevador.Entrar(const pPessoasMaisTotal: Integer): String;
 begin
-  if FQTDPessoas + pNumPesEntrou < FCapacidadeCarga then
-    begin
-      FQTDPessoas := FQTDPessoas + pNumPesEntrou;
-      ShowMessage('Entrou Pessoa(s)');
-    end
-  else
-    ShowMessage('Não a Mais Lugar');
+  Result := '';
+
+  if pPessoasMaisTotal > FCapacidadeCarga then
+    Result := 'Não a Mais Lugar Dentro do Elevador, espere o próximo!!!';
+
+  if Result = '' then
+  begin
+    FQTDPessoas := FQTDPessoas + 1;
+  end;
 end;
 
-function TElevador.Sair(const pNumPesSaiu: Integer): Integer;
+function TElevador.Sair(const pPessoasMaisTotal: Integer): String;
 begin
-  if pNumPesSaiu >= 1 then
-    begin
-      FQTDPessoas := FQTDPessoas - pNumPesSaiu;
-      ShowMessage('Saiu Pessoa(s).');
-    end
-    else if FQTDPessoas + pNumPesSaiu >= 1 then
-    begin
-      FQTDPessoas := FQTDPessoas - pNumPesSaiu;
-      ShowMessage('Saiu Pessoa(s)');
-    end
-    else if pNumPesSaiu <= 0 then
-      ShowMessage('Não á Pessoa para Descer');
+  Result := '';
+
+  if pPessoasMaisTotal < 0 then
+    Result := 'Não há Pessoa para Descer.';
+
+  if Result = '' then
+  begin
+    FQTDPessoas := FQTDPessoas - 1;
+  end;
 end;
 
 function TElevador.GetAndar: Integer;

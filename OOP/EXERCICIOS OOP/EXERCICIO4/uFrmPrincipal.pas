@@ -130,6 +130,10 @@ begin
         xCombustivel.QtdTanquePosto := StrToFLoat(edtTotalTanquePosto.Text);
         if rdgTipoCombustivel.ItemIndex = 2 then
         edtDisplayCombustivel.Text := FloatToStr(xcombustivel.ValorLitro);
+        {1º. Esse edtDisplayCombustivel.Text vai receber a property ValorLitro
+        que na tela da class essa property está ligada a um SetValorLitro e um
+        GetValorLitro, analisando o set pega o valor e o set busca esse valor e
+        lança no field FValorLitro}
       end;
     end;
   finally
