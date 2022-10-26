@@ -30,7 +30,7 @@ end;
 
 function TDisciplina.CalculaMedia: Double;
 begin
-
+  Result :=
 end;
 
 function TDisciplina.GetFCodigo: Integer;

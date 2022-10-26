@@ -39,7 +39,6 @@ type
     procedure Button1Click(Sender: TObject);
   private
     FPesso_elevador : TElevador;
-    MovimentosCaixa  : TStringlist;
     { Private declarations }
   public
     { Public declarations }
