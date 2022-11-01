@@ -2,13 +2,16 @@ program SistemaPedido;
 
 uses
   Vcl.Forms,
-  uFrmPrincipal in 'uFrmPrincipal.pas' {Form1};
+  uFrmPrincipal in 'uFrmPrincipal.pas' {FrmPrincipal},
+  uDmPedidos in 'uDmPedidos.pas' {dmPedidos: TDataModule},
+  uFrmCompradores in 'uFrmCompradores.pas' {FrmCompradores};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TdmPedidos, dmPedidos);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.Run;
 end.

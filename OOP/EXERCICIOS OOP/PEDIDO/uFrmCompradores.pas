@@ -1,0 +1,58 @@
+unit uFrmCompradores;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, Vcl.StdCtrls,
+  Vcl.Mask, Vcl.DBCtrls, FireDAC.Comp.DataSet, Vcl.ExtCtrls, Vcl.Grids,
+  Vcl.DBGrids, FireDAC.Comp.Client;
+
+type
+  TFrmCompradores = class(TForm)
+    FDTable: TFDTable;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    FDTableId: TFDAutoIncField;
+    FDTableNome: TStringField;
+    FDTableCargo: TStringField;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    DataSource: TDataSource;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCompradores: TFrmCompradores;
+
+implementation
+
+{$R *.dfm}
+
+uses uDmPedidos;
+
+procedure TFrmCompradores.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := CaFree;
+  FDTable.Close;
+
+  FrmCompradores := nil;
+end;
+
+procedure TFrmCompradores.FormCreate(Sender: TObject);
+begin
+  FDTable.Open;
+end;
+
+end.

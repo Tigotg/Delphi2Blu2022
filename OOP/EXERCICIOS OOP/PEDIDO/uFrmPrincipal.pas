@@ -5,10 +5,10 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
-  Vcl.StdCtrls;
+  Vcl.StdCtrls, uFrmCompradores;
 
 type
-  TForm1 = class(TForm)
+  TFrmPrincipal = class(TForm)
     Panel1: TPanel;
     Panel2: TPanel;
     Image1: TImage;
@@ -22,6 +22,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    procedure Image2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,10 +30,18 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FrmPrincipal: TFrmPrincipal;
 
 implementation
 
 {$R *.dfm}
+
+procedure TFrmPrincipal.Image2Click(Sender: TObject);
+begin
+  if not assigned(FrmCompradores) then
+    FrmCompradores := TFrmCompradores.Create(Self);
+
+  FrmCompradores.Show;
+end;
 
 end.

@@ -2,8 +2,14 @@
 <BorlandProject>
   <Transactions>
     <Transaction>2022/10/31 20:11:12.099,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/31 20:18:04.969,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\uFrmPrincipal.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2022/10/31 20:18:04.969,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\uFrmPrincipal.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 20:18:04.969,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\uFrmPrincipal.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2022/10/31 20:18:29.725,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\SistemaPedido.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/31 21:04:41.208,=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 21:05:18.296,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\uDmPedidos.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 21:05:18.296,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\uDmPedidos.dfm=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\Unit1.dfm</Transaction>
+    <Transaction>2022/10/31 21:25:53.227,=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 21:26:17.767,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\uFrmCompradores.pas=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 21:26:17.767,C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\uFrmCompradores.dfm=C:\Users\tancleto\Documents\Delphi2Blu2022\OOP\EXERCICIOS OOP\PEDIDO\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>
