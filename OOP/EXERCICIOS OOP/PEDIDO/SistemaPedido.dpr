@@ -4,7 +4,11 @@ uses
   Vcl.Forms,
   uFrmPrincipal in 'uFrmPrincipal.pas' {FrmPrincipal},
   uDmPedidos in 'uDmPedidos.pas' {dmPedidos: TDataModule},
-  uFrmCompradores in 'uFrmCompradores.pas' {FrmCompradores};
+  uFrmCompradores in 'uFrmCompradores.pas' {FrmCompradores},
+  uFrmFornecedores in 'uFrmFornecedores.pas' {FrmFornecedores},
+  uFrmProdutos in 'uFrmProdutos.pas' {FrmProdutos},
+  uFrmUnidadeMedida in 'uFrmUnidadeMedida.pas' {FrmUnidadeMedida},
+  uFrmPedidos in 'uFrmPedidos.pas' {FrmPedidos};
 
 {$R *.res}
 

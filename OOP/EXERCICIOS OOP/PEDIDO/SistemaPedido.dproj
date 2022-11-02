@@ -113,6 +113,22 @@
             <Form>FrmCompradores</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uFrmFornecedores.pas">
+            <Form>FrmFornecedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uFrmProdutos.pas">
+            <Form>FrmProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uFrmUnidadeMedida.pas">
+            <Form>FrmUnidadeMedida</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uFrmPedidos.pas">
+            <Form>FrmPedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -16,7 +16,7 @@ object FrmCompradores: TFrmCompradores
   PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
-    Left = 24
+    Left = 8
     Top = 80
     Width = 10
     Height = 13
@@ -24,7 +24,7 @@ object FrmCompradores: TFrmCompradores
     FocusControl = DBEdit4
   end
   object Label5: TLabel
-    Left = 24
+    Left = 8
     Top = 120
     Width = 27
     Height = 13
@@ -32,7 +32,7 @@ object FrmCompradores: TFrmCompradores
     FocusControl = DBEdit5
   end
   object Label6: TLabel
-    Left = 24
+    Left = 8
     Top = 160
     Width = 29
     Height = 13
@@ -45,6 +45,7 @@ object FrmCompradores: TFrmCompradores
     Width = 481
     Height = 120
     DataSource = DataSource
+    ReadOnly = True
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -72,7 +73,7 @@ object FrmCompradores: TFrmCompradores
       end>
   end
   object DBNavigator1: TDBNavigator
-    Left = 24
+    Left = 8
     Top = 21
     Width = 240
     Height = 25
@@ -80,7 +81,7 @@ object FrmCompradores: TFrmCompradores
     TabOrder = 1
   end
   object DBEdit4: TDBEdit
-    Left = 24
+    Left = 8
     Top = 96
     Width = 134
     Height = 21
@@ -89,7 +90,7 @@ object FrmCompradores: TFrmCompradores
     TabOrder = 2
   end
   object DBEdit5: TDBEdit
-    Left = 24
+    Left = 8
     Top = 136
     Width = 313
     Height = 21
@@ -98,7 +99,7 @@ object FrmCompradores: TFrmCompradores
     TabOrder = 3
   end
   object DBEdit6: TDBEdit
-    Left = 24
+    Left = 8
     Top = 176
     Width = 313
     Height = 21
@@ -116,6 +117,7 @@ object FrmCompradores: TFrmCompradores
       FieldName = 'Id'
       Origin = 'Id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object FDTableNome: TStringField
       FieldName = 'Nome'
