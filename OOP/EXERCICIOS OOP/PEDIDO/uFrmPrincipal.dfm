@@ -2,8 +2,8 @@ object FrmPrincipal: TFrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Sistema de Pedido de Compra'
-  ClientHeight = 637
-  ClientWidth = 660
+  ClientHeight = 474
+  ClientWidth = 469
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,11 +16,12 @@ object FrmPrincipal: TFrmPrincipal
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 660
-    Height = 145
+    Width = 469
+    Height = 113
     Align = alTop
     Caption = '.'
     TabOrder = 0
+    ExplicitWidth = 660
     object Image1: TImage
       Left = 8
       Top = 7
@@ -298,16 +299,19 @@ object FrmPrincipal: TFrmPrincipal
   end
   object Panel2: TPanel
     Left = 0
-    Top = 145
-    Width = 660
-    Height = 492
+    Top = 113
+    Width = 469
+    Height = 361
     Align = alClient
     TabOrder = 1
+    ExplicitTop = 145
+    ExplicitWidth = 660
+    ExplicitHeight = 492
     object Image6: TImage
       Left = 1
       Top = 1
-      Width = 658
-      Height = 490
+      Width = 467
+      Height = 359
       Align = alClient
       Center = True
       Picture.Data = {
@@ -2169,6 +2173,7 @@ object FrmPrincipal: TFrmPrincipal
         3905ED3C4E95F34867CC854BBA4A773760BA35E614B4F3B8F97DE298638E39E6
         13D03490FF07A915F62729CABA9F0000000049454E44AE426082}
       ExplicitTop = 16
+      ExplicitWidth = 658
       ExplicitHeight = 515
     end
   end
