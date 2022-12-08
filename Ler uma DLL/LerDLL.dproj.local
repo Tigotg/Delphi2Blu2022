@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/11/01 18:17:00.000.622,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/04 20:21:33.000.983,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/18 21:32:32.000.358,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/25 19:23:08.000.203,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 21:32:33.315,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 21:37:08.880,C:\Users\tancleto\Documents\Delphi2Blu2022\Ler uma DLL\UfrmPrincipal.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/12/07 21:37:08.880,C:\Users\tancleto\Documents\Delphi2Blu2022\Ler uma DLL\UfrmPrincipal.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 21:37:15.361,C:\Users\tancleto\Documents\Delphi2Blu2022\Ler uma DLL\LerDLL.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

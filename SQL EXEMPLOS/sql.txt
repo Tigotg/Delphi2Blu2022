@@ -1,0 +1,53 @@
+ATIVIDADE 2
+FUNCIONARIO
+
+CODIGO DE CADASTRO      = COD_CADASTRO      - INT (PK - INC)
+NOME COMPLETO           = NOME_COMPLETO     - VARCHAR(150) (NOT NULL)
+IDADE                   = IDADE             - TINYINT UNSIGNED (NOT NULL)
+DATA NASCIMENTO         = DATA_NASC         - DATE (NOT NULL)
+CPF                     = CPF               - CHAR(14) (UNIQUE)
+CNPJ                    = CNPJ              - CHAR(18) (UNIQUE)
+RUA                     = RUA               - VARCHAR(80) (NOT NULL)
+NUMERO                  = NUMERO            - TINYINT UNSIGNED (NULL)
+COMPLEMENTO             = COMPLEMENTO       - VARCHAR(100) (NULL)
+CEP                     = CEP               - CHAR(9) (NOT NULL)
+CIDADE			= CIDADE	    - CHAR(30) (NOT NULL)
+ESTADO			= ESTADO 	    - CHAR(20) (NOT NULL)
+CODIGO DE CADASTRO      = COD_CADASTRO      - TINYINT UNSIGNED (NOT NULL)
+DATA DE CADASTRO	= DATA_CADASTRO     - DATE (NOT NULL)
+ULTIMA ATUALIZAÇÃO 
+CADASTRO                = ULT_ATUALIZ_CAD   - DATE (NOT NULL)
+SEXO                    = SEXO              - CHAR(10) (NULL)
+RELIGIAO                = RELIGIAO          - VARCHAR (NULL)
+COR                     = COR	            - CHAR(15) (NULL)		
+QI                      = QI		    - TINYINT UNSIGNED (NULL)
+TIPO SANGUINEO	        = TIPO_SANGUINEO    - CHAR(3) (NOT NULL)
+SE É DOADOR DE ORGÃO    = DOADOR_ORGAO      - BOOL (NOT NULL)
+SE TEM PASSAGEM PELA 
+POLICIA                 = PASSAGEM_POLICIA  - BOOL (NOT NULL)
+QUAL SEU GRAU DE ENSINO = GRAU_ENSINO       - CHAR(15) (NOT NULL)
+SE O USUARIO ESTA OU
+NÃO ATIVO               = USUAR_ATIV_INATIV - BOOL (NOT NULL)
+
+
+
+
+
+DEPENDENTES
+CODIGO DEPENDENTE     = COD_DEPENDENTE               - INT (NOT NULL) (INC)
+CODIGO FUNCIONARIO    = COD_FUNCIONARIO              - INT
+GRAU PARENTESCO       = GRAU_PARENTESCO              - CHAR (15) (NOT NULL)
+DATA NASCIMENTO       = DEPENDENTE_DATA_NASC         - DATE (NOT NULL)
+SEXO 		      = DEPENDENTE_SEXO              - CHAR(10) (NULL)
+ENDEREÇO              = DEPENDENTE_ENDERECO          - VARCHAR(100) (NULL)
+COMPLEMENTO           = DEPENDENTE_COMPLEMENTO       - VARCHAR(100) (NULL)
+BAIRRO                = DEPENDENTE_BAIRRO            - VARCHAR(50) (NULL)
+ESTADO		      = DEPENDENTE_ESTADO 	     - CHAR(20) (NOT NULL)
+CEP                   = DEPENDENTE_CEP               - CHAR(9) (NOT NULL)
+CIDADE		      = DEPENDENTE_CIDADE	     - CHAR(30) (NOT NULL)
+TIPO SANGUINEO	      = DEPENDENTE_TP_SANGUINEO    - CHAR(3) (NOT NULL)
+
+
+
+
+
